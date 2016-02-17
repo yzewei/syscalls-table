@@ -23,7 +23,6 @@ print("""
 <html>
 <head>
     <title>System calls table for several architectures</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="print, projection, screen" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://raw.githubusercontent.com/christianbach/tablesorter/master/jquery.tablesorter.js"></script>
     <script type="text/javascript" id="js">
