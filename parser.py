@@ -24,7 +24,7 @@ print("""
 <head>
     <title>System calls table for several architectures</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://raw.githubusercontent.com/christianbach/tablesorter/master/jquery.tablesorter.js"></script>
+    <script src="https://resources.one.pl/js/jquery.tablesorter.js"></script>
     <script type="text/javascript" id="js">
             $(document).ready(function() {
             // call the tablesorter plugin
