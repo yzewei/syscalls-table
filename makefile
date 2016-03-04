@@ -1,3 +1,5 @@
+arch: list-syscalls
+	./list-syscalls >tables/syscalls-$(shell uname -m)
 list-syscalls.c:
 	./update-list.sh | sed -e "s/'/\"/g">list-syscalls.c
 
