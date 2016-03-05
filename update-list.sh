@@ -2,9 +2,13 @@
 
 TMP=`mktemp`
 
-grep "#define __NR_" /usr/include/asm-generic/unistd.h |grep -v NR3264|cut -d" " -f2|sed -e "s/__NR_//g" >$TMP
-cat tables/syscall-names.text >>$TMP
-sort -u $TMP >tables/syscall-names.text
+grep "#define __NR_" /usr/include/asm-generic/unistd.h | \
+        grep -v NR3264 | \
+        grep -v __NR_syscall | \
+        cut -d" " -f2 | \
+        sed -e "s/__NR_//g" >$TMP
+cat syscall-names.text >>$TMP
+sort -u $TMP >syscall-names.text
 
 echo "
 #include <stdio.h>
@@ -15,7 +19,7 @@ int main(void)
 {
 "
 
-for syscall in `cat tables/syscall-names.text`
+for syscall in `cat syscall-names.text`
 do
 
 	echo "
