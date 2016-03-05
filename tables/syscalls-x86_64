@@ -1,5 +1,5 @@
-accept	43
 accept4	288
+accept	43
 access	21
 acct	163
 add_key	248
@@ -21,8 +21,8 @@ capget	125
 capset	126
 chdir	80
 chmod	90
-chown	92
 chown32
+chown	92
 chroot	161
 clock_adjtime	305
 clock_getres	229
@@ -36,18 +36,18 @@ copy_file_range	326
 creat	85
 create_module	174
 delete_module	176
-dup	32
 dup2	33
+dup	32
 dup3	292
-epoll_create	213
 epoll_create1	291
+epoll_create	213
 epoll_ctl	233
 epoll_ctl_old	214
 epoll_pwait	281
 epoll_wait	232
 epoll_wait_old	215
-eventfd	284
 eventfd2	290
+eventfd	284
 execve	59
 execveat	322
 exit	60
@@ -61,11 +61,11 @@ fanotify_mark	301
 fchdir	81
 fchmod	91
 fchmodat	268
-fchown	93
 fchown32
+fchown	93
 fchownat	260
-fcntl	72
 fcntl64
+fcntl	72
 fdatasync	75
 fgetxattr	193
 finit_module	313
@@ -81,14 +81,14 @@ fstatfs	138
 fstatfs64
 fsync	74
 ftime
-ftruncate	77
 ftruncate64
+ftruncate	77
 futex	202
 futimesat	261
 getcpu	309
 getcwd	79
-getdents	78
 getdents64	217
+getdents	78
 getegid	108
 getegid32
 geteuid	107
@@ -128,8 +128,8 @@ gtty
 idle
 init_module	175
 inotify_add_watch	254
-inotify_init	253
 inotify_init1	294
+inotify_init	253
 inotify_rm_watch	255
 io_cancel	210
 ioctl	16
@@ -147,8 +147,8 @@ kexec_file_load	320
 kexec_load	246
 keyctl	250
 kill	62
-lchown	94
 lchown32
+lchown	94
 lgetxattr	192
 link	86
 linkat	265
@@ -176,8 +176,8 @@ mknodat	259
 mlock	149
 mlock2	325
 mlockall	151
-mmap	9
 mmap2
+mmap	9
 modify_ldt	154
 mount	165
 move_pages	279
@@ -253,8 +253,8 @@ recvmsg	47
 remap_file_pages	216
 removexattr	197
 rename	82
-renameat	264
 renameat2	316
+renameat	264
 request_key	249
 restart_syscall	219
 rmdir	84
@@ -355,8 +355,8 @@ swapon	167
 symlink	88
 symlinkat	266
 sync	162
-sync_file_range	277
 sync_file_range2
+sync_file_range	277
 syncfs	306
 _sysctl	156
 sysfs	139
@@ -377,8 +377,8 @@ timer_gettime	224
 timer_settime	223
 times	100
 tkill	200
-truncate	76
 truncate64
+truncate	76
 tuxcall	184
 ugetrlimit
 ulimit

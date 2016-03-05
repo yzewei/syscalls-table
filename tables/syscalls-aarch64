@@ -36,8 +36,8 @@ copy_file_range	285
 creat
 create_module
 delete_module	106
-dup	23
 dup2
+dup	23
 dup3	24
 epoll_create
 epoll_create1	20
@@ -61,8 +61,8 @@ fanotify_mark	263
 fchdir	50
 fchmod	52
 fchmodat	53
-fchown	55
 fchown32
+fchown	55
 fchownat	54
 fcntl	25
 fcntl64
@@ -74,8 +74,8 @@ flock	32
 fork
 fremovexattr	16
 fsetxattr	7
-fstat	80
 fstat64
+fstat	80
 fstatat64
 fstatfs	44
 fstatfs64
@@ -176,8 +176,8 @@ mknodat	33
 mlock	228
 mlock2	284
 mlockall	230
-mmap	222
 mmap2
+mmap	222
 modify_ldt
 mount	40
 move_pages	239
@@ -253,8 +253,8 @@ recvmsg	212
 remap_file_pages	234
 removexattr	14
 rename
-renameat	38
 renameat2	276
+renameat	38
 request_key	218
 restart_syscall	128
 rmdir
@@ -286,8 +286,8 @@ semget	190
 semop	193
 semtimedop	192
 send
-sendfile	71
 sendfile64
+sendfile	71
 sendmmsg	269
 sendmsg	211
 sendto	206
@@ -355,8 +355,8 @@ swapon	224
 symlink
 symlinkat	36
 sync	81
-sync_file_range	84
 sync_file_range2
+sync_file_range	84
 syncfs	267
 _sysctl
 sysfs
