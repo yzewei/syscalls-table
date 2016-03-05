@@ -7,20 +7,27 @@ syscalls = collections.OrderedDict()
 archs = []
 os.chdir('tables')
 for filename in os.listdir(os.getcwd()):
-    arch=filename.replace('syscalls-', '')
 
-    with open(filename, newline='') as csvh:
-        seccompdata = csv.reader(csvh, delimiter="\t")
+    try:
+        arch=filename.replace('syscalls-', '')
 
-        for row in seccompdata:
-            if not row[0] in syscalls:
-                syscalls[row[0]] = collections.OrderedDict()
+        with open(filename, newline='') as csvh:
+            seccompdata = csv.reader(csvh, delimiter="\t")
             archs.append(arch)
 
-            syscalls[row[0]][arch] = row[1]
+            for row in seccompdata:
+                try:
+                    syscalls[row[0]][arch] = row[1]
+                except KeyError:
+                    syscalls[row[0]] = collections.OrderedDict()
+                    syscalls[row[0]][arch] = row[1]
+                except IndexError:
+                    pass
+
+    except IndexError:
+        pass
 
 #pprint.pprint(syscalls)
-
 print("""
 <html>
 <head>
