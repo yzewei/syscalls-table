@@ -77,7 +77,7 @@ table.tablesorter td {
         <tbody>
 """)
 
-for syscall in syscalls.keys():
+for syscall in sorted(syscalls.keys()):
     print("<tr><td>%s</td>" % syscall)
 
     for arch in sorted(syscalls[syscall]):
