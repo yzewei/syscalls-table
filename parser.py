@@ -4,6 +4,7 @@ import collections, csv, pprint, os
 
 syscalls = collections.OrderedDict()
 
+archs = []
 os.chdir('tables')
 for filename in os.listdir(os.getcwd()):
     arch=filename.replace('syscalls-', '')
@@ -14,6 +15,7 @@ for filename in os.listdir(os.getcwd()):
         for row in seccompdata:
             if not row[0] in syscalls:
                 syscalls[row[0]] = collections.OrderedDict()
+            archs.append(arch)
 
             syscalls[row[0]][arch] = row[1]
 
@@ -61,17 +63,13 @@ table.tablesorter td {
         <thead>
             <tr>
                 <th>system call</th>
-                <th>aarch64</th>
-                <th>arm</th>
-                <th>mips</th>
-                <th>mips64</th>
-                <th>mips64n32
-                <th>ppc64</th>
-                <th>s390</th>
-                <th>s390x</th>
-                <th>x32</th>
-                <th>x86</th>
-                <th>x86_64</th>
+""")
+
+for arch in sorted(archs):
+    print("<th>%s</th>" % arch)
+
+
+print("""
             </tr>
         </thead>
         <tbody>
@@ -80,12 +78,15 @@ table.tablesorter td {
 for syscall in sorted(syscalls.keys()):
     print("<tr><td>%s</td>" % syscall)
 
-    for arch in sorted(syscalls[syscall]):
-        syscallnr = syscalls[syscall][arch]
-        css = ''
-        if syscallnr == '' or int(syscallnr) < 0:
-            syscallnr = '-1'
+    for arch in sorted(archs):
+
+        try:
+            syscallnr = syscalls[syscall][arch]
+            css = ''
+        except KeyError:
+            syscallnr = -1
             css = ' class="legacy" '
+
         print("<td%s>%s</td>" % (css, syscallnr))
 
     print("</tr>")
