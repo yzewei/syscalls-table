@@ -355,7 +355,8 @@ sync	36
 sync_file_range	314
 sync_file_range2	-10089
 syncfs	344
-syscall	-10090
+syscall
+syscalls
 sysfs	135
 sysinfo	116
 syslog	103
