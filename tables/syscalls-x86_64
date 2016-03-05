@@ -358,8 +358,6 @@ sync	162
 sync_file_range	277
 sync_file_range2
 syncfs	306
-syscall
-syscalls
 _sysctl	156
 sysfs	139
 sysinfo	99
