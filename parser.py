@@ -94,6 +94,10 @@ for syscall in sorted(syscalls.keys()):
             syscallnr = -1
             css = ' class="legacy" '
 
+        if not syscallnr:
+            syscallnr = -1
+            css = ' class="legacy" '
+
         print("<td%s>%s</td>" % (css, syscallnr))
 
     print("</tr>")
