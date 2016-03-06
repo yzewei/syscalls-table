@@ -2,7 +2,7 @@
 
 TMP=`mktemp`
 
-grep "#define __NR_" /usr/include/asm-generic/unistd.h | \
+grep "#define __NR_" /usr/include/asm-generic/unistd.h /usr/include/asm/unistd.h | \
         grep -v NR3264 | \
         grep -v __NR_syscall | \
         cut -d" " -f2 | \
