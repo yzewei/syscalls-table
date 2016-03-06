@@ -57,10 +57,14 @@ table.tablesorter td {
 <body>
     <p>
     This table shows system call numbers from several architectures.
-    Value "-1" means legacy syscall which is not supported on this
-    architecture.
     </p>
     <p>
+    Value "-1" has few meanings:
+    <ul>
+        <li>legacy syscall which is not supported on this architecture</li>
+        <li>syscall added in newer kernel version than was present on testing machine</li>
+    </ul>
+    </p>
     To add new column please contact me.
     </p>
     <p>
