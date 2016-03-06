@@ -6,9 +6,9 @@ add_key	4280
 adjtimex	4124
 afs_syscall	4137
 alarm	4027
-arch_prctl	-10001
-arm_fadvise64_64	-10083
-arm_sync_file_range	-10084
+arch_prctl
+arm_fadvise64_64
+arm_sync_file_range
 bdflush	4134
 bind	4169
 bpf	4355
@@ -20,7 +20,7 @@ capget	4204
 capset	4205
 chdir	4012
 chmod	4015
-chown32	-10004
+chown32
 chown	4202
 chroot	4061
 clock_adjtime	4341
@@ -40,10 +40,10 @@ dup	4041
 epoll_create1	4326
 epoll_create	4248
 epoll_ctl	4249
-epoll_ctl_old	-10005
+epoll_ctl_old
 epoll_pwait	4313
 epoll_wait	4250
-epoll_wait_old	-10006
+epoll_wait_old
 eventfd2	4325
 eventfd	4319
 execve	4011
@@ -52,14 +52,14 @@ exit	4001
 exit_group	4246
 faccessat	4300
 fadvise64	4254
-fadvise64_64	-10007
+fadvise64_64
 fallocate	4320
 fanotify_init	4336
 fanotify_mark	4337
 fchdir	4133
 fchmod	4094
 fchmodat	4299
-fchown32	-10008
+fchown32
 fchown	4095
 fchownat	4291
 fcntl	4055
@@ -87,13 +87,13 @@ getcpu	4312
 getcwd	4203
 getdents	4141
 getdents64	4219
-getegid32	-10015
+getegid32
 getegid	4050
-geteuid32	-10016
+geteuid32
 geteuid	4049
-getgid32	-10017
+getgid32
 getgid	4047
-getgroups32	-10018
+getgroups32
 getgroups	4080
 getitimer	4105
 get_kernel_syms	4130
@@ -106,9 +106,9 @@ getpmsg	4208
 getppid	4064
 getpriority	4096
 getrandom	4353
-getresgid32	-10019
+getresgid32
 getresgid	4191
-getresuid32	-10020
+getresuid32
 getresuid	4186
 getrlimit	4076
 get_robust_list	4310
@@ -116,10 +116,10 @@ getrusage	4077
 getsid	4151
 getsockname	4172
 getsockopt	4173
-get_thread_area	-10076
+get_thread_area
 gettid	4222
 gettimeofday	4078
-getuid32	-10021
+getuid32
 getuid	4024
 getxattr	4227
 gtty	4032
@@ -141,11 +141,11 @@ io_setup	4241
 io_submit	4244
 ipc	4117
 kcmp	4347
-kexec_file_load	-10111
+kexec_file_load
 kexec_load	4311
 keyctl	4282
 kill	4037
-lchown32	-10025
+lchown32
 lchown	4016
 lgetxattr	4228
 link	4009
@@ -186,33 +186,33 @@ mq_timedreceive	4274
 mq_timedsend	4273
 mq_unlink	4272
 mremap	4167
-msgctl	-214
-msgget	-213
-msgrcv	-212
-msgsnd	-211
+msgctl
+msgget
+msgrcv
+msgsnd
 msync	4144
 munlock	4155
 munlockall	4157
 munmap	4091
 name_to_handle_at	4339
 nanosleep	4166
-newfstatat	-10031
+newfstatat
 _newselect	4142
 nfsservctl	4189
 nice	4034
-oldfstat	-10034
-oldlstat	-10035
-oldolduname	-10036
-oldstat	-10037
-olduname	-10038
-oldwait4	-10146
+oldfstat
+oldlstat
+oldolduname
+oldstat
+olduname
+oldwait4
 open	4005
 openat	4288
 open_by_handle_at	4340
 pause	4029
-pciconfig_iobase	-10086
-pciconfig_read	-10087
-pciconfig_write	-10088
+pciconfig_iobase
+pciconfig_read
+pciconfig_write
 perf_event_open	4333
 personality	4136
 pipe2	4328
@@ -275,12 +275,12 @@ sched_setparam	4158
 sched_setscheduler	4160
 sched_yield	4162
 seccomp	4352
-security	-10042
-select	-10101
-semctl	-203
-semget	-202
-semop	-201
-semtimedop	-204
+security
+select
+semctl
+semget
+semop
+semtimedop
 send	4178
 sendfile	4207
 sendfile64	4237
@@ -288,13 +288,13 @@ sendmmsg	4343
 sendmsg	4179
 sendto	4180
 setdomainname	4121
-setfsgid32	-10044
+setfsgid32
 setfsgid	4139
-setfsuid32	-10045
+setfsuid32
 setfsuid	4138
-setgid32	-10046
+setgid32
 setgid	4046
-setgroups32	-10047
+setgroups32
 setgroups	4081
 sethostname	4074
 setitimer	4104
@@ -302,13 +302,13 @@ set_mempolicy	4270
 setns	4344
 setpgid	4057
 setpriority	4097
-setregid32	-10048
+setregid32
 setregid	4071
-setresgid32	-10049
+setresgid32
 setresgid	4190
-setresuid32	-10050
+setresuid32
 setresuid	4185
-setreuid32	-10051
+setreuid32
 setreuid	4070
 setrlimit	4075
 set_robust_list	4309
@@ -317,14 +317,14 @@ setsockopt	4181
 set_thread_area	4283
 set_tid_address	4252
 settimeofday	4079
-setuid32	-10052
+setuid32
 setuid	4023
 setxattr	4224
 sgetmask	4068
-shmat	-221
-shmctl	-224
-shmdt	-222
-shmget	-223
+shmat
+shmctl
+shmdt
+shmget
 shutdown	4182
 sigaction	4067
 sigaltstack	4206
@@ -351,7 +351,7 @@ swapon	4087
 symlink	4083
 symlinkat	4297
 sync	4036
-sync_file_range2	-10089
+sync_file_range2
 sync_file_range	4305
 syncfs	4342
 syscall	4000
@@ -376,8 +376,8 @@ times	4043
 tkill	4236
 truncate	4092
 truncate64	4211
-tuxcall	-10067
-ugetrlimit	-10068
+tuxcall
+ugetrlimit
 ulimit	4058
 umask	4060
 umount2	4052
@@ -391,10 +391,10 @@ ustat	4062
 utime	4030
 utimensat	4316
 utimes	4267
-vfork	-10102
+vfork
 vhangup	4111
 vm86	4113
-vm86old	-10072
+vm86old
 vmsplice	4307
 vserver	4277
 wait4	4114
