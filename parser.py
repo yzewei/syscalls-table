@@ -65,7 +65,10 @@ table.tablesorter td {
         <li>syscall added in newer kernel version than was present on testing machine</li>
     </ul>
     </p>
-    To add new column please contact me.
+    <p>
+    Sources used to generate table are available in <a
+    href="https://github.com/hrw/syscalls-table">git repository at github</a>.
+    Pull request is preferred way to update data.
     </p>
     <p>
     Headers are clickable.
