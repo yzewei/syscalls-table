@@ -10,7 +10,7 @@ grep "#define __NR_" /usr/include/asm-generic/unistd.h /usr/include/asm/unistd.h
         cut -d" " -f2 | \
         sed -e "s/__NR_//g" >$TMP
 cat syscall-names.text >>$TMP
-sort -u $TMP >syscall-names.text
+LC_ALL=C sort -u $TMP >syscall-names.text
 
 echo "
 #include <stdio.h>
