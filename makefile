@@ -8,3 +8,6 @@ list-syscalls: list-syscalls.c
 
 out/syscalls.html: 
 	./parser.py >out/syscalls.html
+
+clean:
+	rm list-syscalls list-syscalls.c out/syscalls.html
