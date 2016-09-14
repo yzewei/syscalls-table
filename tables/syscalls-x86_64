@@ -226,6 +226,7 @@ poll	7
 ppoll	271
 prctl	157
 pread64	17
+preadv2	327
 preadv	295
 prlimit64	302
 process_vm_readv	310
@@ -236,6 +237,7 @@ pselect6	270
 ptrace	101
 putpmsg	182
 pwrite64	18
+pwritev2	328
 pwritev	296
 query_module	178
 quotactl	179
