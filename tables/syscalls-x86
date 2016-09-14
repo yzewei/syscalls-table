@@ -7,7 +7,6 @@ adjtimex	124
 afs_syscall	137
 alarm	27
 arch_prctl
-arch_specific_syscall
 arm_fadvise64_64
 arm_sync_file_range
 bdflush	134
