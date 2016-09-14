@@ -66,6 +66,9 @@ table.tablesorter td {
     </ul>
     </p>
     <p>
+    System call names link to their man pages.
+    </p>
+    <p>
     Sources used to generate table are available in <a
     href="https://github.com/hrw/syscalls-table">git repository at github</a>.
     Pull request is preferred way to update data.
