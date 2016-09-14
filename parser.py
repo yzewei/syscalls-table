@@ -90,7 +90,7 @@ print("""
 """)
 
 for syscall in sorted(syscalls.keys()):
-    print("<tr><td>%s</td>" % syscall)
+    print("<tr><td><a href='http://www.man7.org/linux/man-pages/man2/%s.2.html'>%s</a></td>" % (syscall,syscall))
 
     for arch in sorted(archs):
 
