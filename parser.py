@@ -1,6 +1,9 @@
 #!/bin/python3
 
-import collections, csv, pprint, os
+import collections
+import csv
+import datetime
+import os
 
 syscalls = collections.OrderedDict()
 
@@ -27,7 +30,6 @@ for filename in os.listdir(os.getcwd()):
     except IndexError:
         pass
 
-#pprint.pprint(syscalls)
 print("""
 <html>
 <head>
@@ -73,6 +75,11 @@ table.tablesorter td {
     href="https://github.com/hrw/syscalls-table">git repository at github</a>.
     Pull request is preferred way to update data.
     </p>
+""")
+
+print("<p>Table generated on %s</p>" % datetime.datetime.strftime(datetime.datetime.utcnow(), "%Y.%m.%d %H:%M"))
+
+print("""
     <p>
     Headers are clickable.
     </p>
