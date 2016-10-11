@@ -1,3 +1,6 @@
+_llseek
+_newselect
+_sysctl
 accept	202
 accept4	242
 access
@@ -35,8 +38,8 @@ copy_file_range	285
 creat
 create_module
 delete_module	106
-dup2
 dup	23
+dup2
 dup3	24
 epoll_create
 epoll_create1	20
@@ -60,8 +63,8 @@ fanotify_mark	263
 fchdir	50
 fchmod	52
 fchmodat	53
-fchown32
 fchown	55
+fchown32
 fchownat	54
 fcntl	25
 fcntl64
@@ -73,8 +76,8 @@ flock	32
 fork
 fremovexattr	16
 fsetxattr	7
-fstat64
 fstat	80
+fstat64
 fstatat64
 fstatfs	44
 fstatfs64
@@ -84,6 +87,10 @@ ftruncate	46
 ftruncate64
 futex	98
 futimesat
+get_kernel_syms
+get_mempolicy	236
+get_robust_list	100
+get_thread_area
 getcpu	168
 getcwd	17
 getdents
@@ -97,8 +104,6 @@ getgid32
 getgroups	158
 getgroups32
 getitimer	102
-get_kernel_syms
-get_mempolicy	236
 getpeername	205
 getpgid	155
 getpgrp
@@ -112,12 +117,10 @@ getresgid32
 getresuid	148
 getresuid32
 getrlimit	163
-get_robust_list	100
 getrusage	165
 getsid	156
 getsockname	204
 getsockopt	209
-get_thread_area
 gettid	178
 gettimeofday	169
 getuid	174
@@ -131,15 +134,15 @@ inotify_init
 inotify_init1	26
 inotify_rm_watch	28
 io_cancel	3
-ioctl	29
 io_destroy	1
 io_getevents	4
+io_setup	0
+io_submit	2
+ioctl	29
 ioperm
 iopl
 ioprio_get	31
 ioprio_set	30
-io_setup	0
-io_submit	2
 ipc
 kcmp	272
 kexec_file_load
@@ -154,7 +157,6 @@ linkat	37
 listen	201
 listxattr	11
 llistxattr	12
-_llseek
 lock
 lookup_dcookie	18
 lremovexattr	15
@@ -175,8 +177,8 @@ mknodat	33
 mlock	228
 mlock2	284
 mlockall	230
-mmap2
 mmap	222
+mmap2
 modify_ldt
 mount	40
 move_pages	239
@@ -200,7 +202,6 @@ munmap	215
 name_to_handle_at	264
 nanosleep	101
 newfstatat	79
-_newselect
 nfsservctl	42
 nice
 oldfstat
@@ -210,8 +211,8 @@ oldstat
 olduname
 oldwait4
 open
-openat	56
 open_by_handle_at	265
+openat	56
 pause
 pciconfig_iobase
 pciconfig_read
@@ -225,8 +226,8 @@ poll
 ppoll	73
 prctl	167
 pread64	67
-preadv2	286
 preadv	69
+preadv2	286
 prlimit64	261
 process_vm_readv	270
 process_vm_writev	271
@@ -236,8 +237,8 @@ pselect6	72
 ptrace	117
 putpmsg
 pwrite64	68
-pwritev2	287
 pwritev	70
+pwritev2	287
 query_module
 quotactl	60
 read	63
@@ -254,8 +255,8 @@ recvmsg	212
 remap_file_pages	234
 removexattr	14
 rename
-renameat2	276
 renameat	38
+renameat2	276
 request_key	218
 restart_syscall	128
 rmdir
@@ -267,11 +268,11 @@ rt_sigreturn	139
 rt_sigsuspend	133
 rt_sigtimedwait	137
 rt_tgsigqueueinfo	240
+sched_get_priority_max	125
+sched_get_priority_min	126
 sched_getaffinity	123
 sched_getattr	275
 sched_getparam	121
-sched_get_priority_max	125
-sched_get_priority_min	126
 sched_getscheduler	120
 sched_rr_get_interval	127
 sched_setaffinity	122
@@ -287,11 +288,15 @@ semget	190
 semop	193
 semtimedop	192
 send
-sendfile64
 sendfile	71
+sendfile64
 sendmmsg	269
 sendmsg	211
 sendto	206
+set_mempolicy	237
+set_robust_list	99
+set_thread_area
+set_tid_address	96
 setdomainname	162
 setfsgid	152
 setfsgid32
@@ -303,7 +308,6 @@ setgroups	159
 setgroups32
 sethostname	161
 setitimer	103
-set_mempolicy	237
 setns	268
 setpgid	154
 setpriority	140
@@ -316,11 +320,8 @@ setresuid32
 setreuid	145
 setreuid32
 setrlimit	164
-set_robust_list	99
 setsid	157
 setsockopt	208
-set_thread_area
-set_tid_address	96
 settimeofday	170
 setuid	146
 setuid32
@@ -356,10 +357,9 @@ swapon	224
 symlink
 symlinkat	36
 sync	81
-sync_file_range2
 sync_file_range	84
+sync_file_range2
 syncfs	267
-_sysctl
 sysfs
 sysinfo	179
 syslog	116
@@ -369,13 +369,13 @@ tgkill	131
 time
 timer_create	107
 timer_delete	111
+timer_getoverrun	109
+timer_gettime	108
+timer_settime	110
 timerfd
 timerfd_create	85
 timerfd_gettime	87
 timerfd_settime	86
-timer_getoverrun	109
-timer_gettime	108
-timer_settime	110
 times	153
 tkill	130
 truncate	45

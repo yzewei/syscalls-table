@@ -1,3 +1,6 @@
+_llseek	4140
+_newselect	4142
+_sysctl	4153
 accept	4168
 accept4	4334
 access	4033
@@ -20,8 +23,8 @@ capget	4204
 capset	4205
 chdir	4012
 chmod	4015
-chown32
 chown	4202
+chown32
 chroot	4061
 clock_adjtime	4341
 clock_getres	4264
@@ -31,21 +34,22 @@ clock_settime	4262
 clone	4120
 close	4006
 connect	4170
+copy_file_range	4360
 creat	4008
 create_module	4127
 delete_module	4129
+dup	4041
 dup2	4063
 dup3	4327
-dup	4041
-epoll_create1	4326
 epoll_create	4248
+epoll_create1	4326
 epoll_ctl	4249
 epoll_ctl_old
 epoll_pwait	4313
 epoll_wait	4250
 epoll_wait_old
-eventfd2	4325
 eventfd	4319
+eventfd2	4325
 execve	4011
 execveat	4356
 exit	4001
@@ -59,8 +63,8 @@ fanotify_mark	4337
 fchdir	4133
 fchmod	4094
 fchmodat	4299
-fchown32
 fchown	4095
+fchown32
 fchownat	4291
 fcntl	4055
 fcntl64	4220
@@ -83,21 +87,23 @@ ftruncate	4093
 ftruncate64	4212
 futex	4238
 futimesat	4292
+get_kernel_syms	4130
+get_mempolicy	4269
+get_robust_list	4310
+get_thread_area
 getcpu	4312
 getcwd	4203
 getdents	4141
 getdents64	4219
-getegid32
 getegid	4050
-geteuid32
+getegid32
 geteuid	4049
-getgid32
+geteuid32
 getgid	4047
-getgroups32
+getgid32
 getgroups	4080
+getgroups32
 getitimer	4105
-get_kernel_syms	4130
-get_mempolicy	4269
 getpeername	4171
 getpgid	4132
 getpgrp	4065
@@ -106,54 +112,51 @@ getpmsg	4208
 getppid	4064
 getpriority	4096
 getrandom	4353
-getresgid32
 getresgid	4191
-getresuid32
+getresgid32
 getresuid	4186
+getresuid32
 getrlimit	4076
-get_robust_list	4310
 getrusage	4077
 getsid	4151
 getsockname	4172
 getsockopt	4173
-get_thread_area
 gettid	4222
 gettimeofday	4078
-getuid32
 getuid	4024
+getuid32
 getxattr	4227
 gtty	4032
 idle	4112
 init_module	4128
 inotify_add_watch	4285
-inotify_init1	4329
 inotify_init	4284
+inotify_init1	4329
 inotify_rm_watch	4286
 io_cancel	4245
-ioctl	4054
 io_destroy	4242
 io_getevents	4243
+io_setup	4241
+io_submit	4244
+ioctl	4054
 ioperm	4101
 iopl	4110
 ioprio_get	4315
 ioprio_set	4314
-io_setup	4241
-io_submit	4244
 ipc	4117
 kcmp	4347
 kexec_file_load
 kexec_load	4311
 keyctl	4282
 kill	4037
-lchown32
 lchown	4016
+lchown32
 lgetxattr	4228
 link	4009
 linkat	4296
 listen	4174
 listxattr	4230
 llistxattr	4231
-_llseek	4140
 lock	4053
 lookup_dcookie	4247
 lremovexattr	4234
@@ -163,6 +166,7 @@ lstat	4107
 lstat64	4214
 madvise	4218
 mbind	4268
+membarrier	4358
 memfd_create	4354
 migrate_pages	4287
 mincore	4217
@@ -171,9 +175,10 @@ mkdirat	4289
 mknod	4014
 mknodat	4290
 mlock	4154
+mlock2	4359
 mlockall	4156
-mmap2	4210
 mmap	4090
+mmap2	4210
 modify_ldt	4123
 mount	4021
 move_pages	4308
@@ -197,7 +202,6 @@ munmap	4091
 name_to_handle_at	4339
 nanosleep	4166
 newfstatat
-_newselect	4142
 nfsservctl	4189
 nice	4034
 oldfstat
@@ -207,22 +211,23 @@ oldstat
 olduname
 oldwait4
 open	4005
-openat	4288
 open_by_handle_at	4340
+openat	4288
 pause	4029
 pciconfig_iobase
 pciconfig_read
 pciconfig_write
 perf_event_open	4333
 personality	4136
-pipe2	4328
 pipe	4042
+pipe2	4328
 pivot_root	4216
 poll	4188
 ppoll	4302
 prctl	4192
 pread64	4200
 preadv	4330
+preadv2	4361
 prlimit64	4338
 process_vm_readv	4345
 process_vm_writev	4346
@@ -233,6 +238,7 @@ ptrace	4026
 putpmsg	4209
 pwrite64	4201
 pwritev	4331
+pwritev2	4362
 query_module	4187
 quotactl	4131
 read	4003
@@ -249,8 +255,8 @@ recvmsg	4177
 remap_file_pages	4251
 removexattr	4233
 rename	4038
-renameat2	4351
 renameat	4295
+renameat2	4351
 request_key	4281
 restart_syscall	4253
 rmdir	4040
@@ -262,11 +268,11 @@ rt_sigreturn	4193
 rt_sigsuspend	4199
 rt_sigtimedwait	4197
 rt_tgsigqueueinfo	4332
+sched_get_priority_max	4163
+sched_get_priority_min	4164
 sched_getaffinity	4240
 sched_getattr	4350
 sched_getparam	4159
-sched_get_priority_max	4163
-sched_get_priority_min	4164
 sched_getscheduler	4161
 sched_rr_get_interval	4165
 sched_setaffinity	4239
@@ -287,38 +293,38 @@ sendfile64	4237
 sendmmsg	4343
 sendmsg	4179
 sendto	4180
+set_mempolicy	4270
+set_robust_list	4309
+set_thread_area	4283
+set_tid_address	4252
 setdomainname	4121
-setfsgid32
 setfsgid	4139
-setfsuid32
+setfsgid32
 setfsuid	4138
-setgid32
+setfsuid32
 setgid	4046
-setgroups32
+setgid32
 setgroups	4081
+setgroups32
 sethostname	4074
 setitimer	4104
-set_mempolicy	4270
 setns	4344
 setpgid	4057
 setpriority	4097
-setregid32
 setregid	4071
-setresgid32
+setregid32
 setresgid	4190
-setresuid32
+setresgid32
 setresuid	4185
-setreuid32
+setresuid32
 setreuid	4070
+setreuid32
 setrlimit	4075
-set_robust_list	4309
 setsid	4066
 setsockopt	4181
-set_thread_area	4283
-set_tid_address	4252
 settimeofday	4079
-setuid32
 setuid	4023
+setuid32
 setxattr	4224
 sgetmask	4068
 shmat
@@ -351,11 +357,9 @@ swapon	4087
 symlink	4083
 symlinkat	4297
 sync	4036
-sync_file_range2
 sync_file_range	4305
+sync_file_range2
 syncfs	4342
-syscall	4000
-_sysctl	4153
 sysfs	4135
 sysinfo	4116
 syslog	4103
@@ -365,13 +369,13 @@ tgkill	4266
 time	4013
 timer_create	4257
 timer_delete	4261
+timer_getoverrun	4260
+timer_gettime	4259
+timer_settime	4258
 timerfd	4318
 timerfd_create	4321
 timerfd_gettime	4322
 timerfd_settime	4323
-timer_getoverrun	4260
-timer_gettime	4259
-timer_settime	4258
 times	4043
 tkill	4236
 truncate	4092
@@ -380,13 +384,14 @@ tuxcall
 ugetrlimit
 ulimit	4058
 umask	4060
-umount2	4052
 umount	4022
+umount2	4052
 uname	4122
 unlink	4010
 unlinkat	4294
 unshare	4303
 uselib	4086
+userfaultfd	4357
 ustat	4062
 utime	4030
 utimensat	4316
