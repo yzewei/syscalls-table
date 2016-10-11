@@ -1,5 +1,6 @@
 arch: list-syscalls
-	LC_ALL=C ./list-syscalls |sort -u >tables/syscalls-$(shell uname -m)
+	./list-syscalls |LC_ALL=C sort -u >tables/syscalls-$(shell uname -m)
+
 list-syscalls.c:
 	./update-list.sh | sed -e "s/'/\"/g">list-syscalls.c
 
