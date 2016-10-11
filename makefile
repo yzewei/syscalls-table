@@ -12,3 +12,7 @@ out/syscalls.html:
 
 clean:
 	rm list-syscalls list-syscalls.c out/syscalls.html
+
+
+tables:
+	do_all_tables.sh
