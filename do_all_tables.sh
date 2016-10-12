@@ -5,7 +5,7 @@ KERNELSRC=$1
 generate_table() 
 {
 	echo $arch
-	gcc -D${arch^^} list-syscalls.c -I $archdir/include/uapi -I $archdir/include -o list-syscalls
+	gcc -D${arch^^} list-syscalls.c -I $archdir/include/uapi -I $archdir/include ${extraflags} -o list-syscalls
 	./list-syscalls > "tables/syscalls-$arch"
 }
 
@@ -22,30 +22,30 @@ do
 		continue;
 		;;
 	mips)
-				generate_table
-		arch=mips64n32	generate_table
-		arch=mips64	generate_table
+				extraflags=-D_MIPS_SIM=_MIPS_SIM_ABI32	generate_table
+		arch=mips64n32	extraflags=-D_MIPS_SIM=_MIPS_SIM_NABI32	generate_table
+		arch=mips64	extraflags=-D_MIPS_SIM=_MIPS_SIM_ABI64	generate_table
 		;;
 	x86)
-				generate_table
-		#arch=x32 	generate_table
-		arch=x86_64	generate_table
+									generate_table
+		#arch=x32 	extraflags=-D__ILP32__			generate_table
+		arch=x86_64	extraflags=-D__LP64__			generate_table
 		;;
 	powerpc)
-				generate_table
-		arch=powerpc64	generate_table
+									generate_table
+		arch=powerpc64						generate_table
 		;;
 	s390)
-				generate_table
-		arch=s390x	generate_table
+									generate_table
+		arch=s390x						generate_table
 		;;
 	sparc)
-				generate_table
-		arch=sparc64	generate_table
+				extraflags=-D__32bit_syscall_numbers__	generate_table
+		arch=sparc64	extraflags=-D__arch64__			generate_table
 		;;
 	sh)
-				generate_table
-		arch=sh64	generate_table
+									generate_table
+		arch=sh64	extraflags=-D__SH5__			generate_table
 		;;
 	*)
 		generate_table
