@@ -16,7 +16,8 @@ out/syscalls.html: FORCE
 	./parser.py >out/syscalls.html
 
 clean:
-	rm -rf list-syscalls list-syscalls.c out/syscalls.html
+	rm -rf list-syscalls list-syscalls.c out/syscalls.html headers
 
 tables: list-syscalls.c FORCE
+	mkdir -p headers
 	./do_all_tables.sh ${KERNELSRC}

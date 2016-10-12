@@ -2,10 +2,16 @@
 
 KERNELSRC=$1
 
+export_headers()
+{
+	make -s -C ${KERNELSRC} ARCH=${arch} O=${PWD}/headers headers_install
+}
+
 generate_table() 
 {
 	echo $arch
-	gcc -D${arch^^} list-syscalls.c -I $archdir/include/uapi -I $archdir/include ${extraflags} -o list-syscalls
+	gcc list-syscalls.c -U__LP64__ -U__ILP32__ -U__i386__ -D${arch^^} \
+		-D__${arch}__ ${extraflags} -I headers/usr/include/ -o list-syscalls
 	./list-syscalls > "tables/syscalls-$arch"
 }
 
@@ -21,6 +27,11 @@ do
 	um)
 		continue;
 		;;
+	esac
+
+	export_headers
+
+	case ${arch} in
 	arm)
 		arch=armoabi	extraflags=				generate_table
 		arch=arm	extraflags=-D__ARM_EABI__		generate_table
