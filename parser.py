@@ -97,32 +97,43 @@ table.syscalls tbody tr.odd td {
     </style>
 </head>
 <body>
+
+<h1>Introduction</h1>
     <p>
-    This table shows system call numbers from several architectures.
+    Linux provides many system calls for userspace. But numbers used for them
+    differ between architectures. This page was created to help developers find
+    those values.
     </p>
     <p>
-    Value "-1" has few meanings:
+    But there is another issue. Some of system calls got dropped during Linux
+    development, some got replaced by newer ones. Several architectures got
+    added into kernel later and their maintainers decided to not bother with
+    supporting obsoleted system calls. They are marked with "-1" value in table
+    below.
+    </p>
+<h1>How to use</h1>
+    <p>
+    There are few features you can use:
+    
     <ul>
-        <li>legacy syscall which is not supported on this architecture</li>
-        <li>syscall added in newer kernel version than was present on testing machine</li>
+    <li>search field allows to filter table by syscall name or number</li>
+    <li>system call names link to their man pages</li>
+    <li>'disable architectures' button allows to disable not needed columns</li>
+    <li>clicking on header entries sorts table</li>
     </ul>
     </p>
-    <p>
-    System call names link to their man pages.
-    </p>
+
+
+<h1>How to help</h1>
     <p>
     Sources used to generate table are available in <a
     href="https://github.com/hrw/syscalls-table">git repository at github</a>.
-    Pull request is preferred way to update data.
+    Patches are always welcomed.
     </p>
 """)
 
-print("<p>Table generated on %s</p>" % datetime.datetime.strftime(datetime.datetime.utcnow(), "%Y.%m.%d %H:%M"))
 
 print("""
-    <p>
-    Headers are clickable.
-    </p>
     <table class="syscalls">
         <thead>
             <tr>
@@ -172,6 +183,7 @@ for syscall in sorted(syscalls.keys()):
 print("""
         </tbody>
     </table>
+    <p>Table generated on %s</p>
 </body>
 </html>
-""")
+""" % datetime.datetime.strftime(datetime.datetime.utcnow(), "%Y.%m.%d %H:%M"))
