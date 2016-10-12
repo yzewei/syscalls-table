@@ -40,7 +40,7 @@ print("""
     <script type="text/javascript" id="js">
             $(document).ready(function() {
             // call the tablesorter plugin
-            $("table").tablesorter({textExtraction: "complex"});
+            $("table").tablesorter({textExtraction: "complex", widgets: ['zebra']});
 	    $('table').stickyTableHeaders();
     }); 
     </script>
@@ -64,6 +64,10 @@ table.tablesorter thead {
 
 table.tablesorter td {
 	padding: 0.5em;
+}
+
+table.tablesorter tbody tr.odd td {
+	background-color: lightgrey;
 }
 
 .legacy {
@@ -114,8 +118,18 @@ print("""
         <tbody>
 """)
 
+oddeven = 0
+
 for syscall in sorted(syscalls.keys()):
-    print("<tr><td><a href='http://www.man7.org/linux/man-pages/man2/%s.2.html'>%s</a></td>" % (syscall,syscall))
+
+    if (oddeven % 2 == 0):
+        trclass = "even"
+    else:
+        trclass = "odd"
+
+    oddeven += 1
+
+    print("<tr class='%s'><td><a href='http://www.man7.org/linux/man-pages/man2/%s.2.html'>%s</a></td>" % (trclass, syscall,syscall))
 
     for arch in sorted(archs):
 
