@@ -55,8 +55,8 @@ execveat	281
 exit	93
 exit_group	94
 faccessat	48
-fadvise64	223
-fadvise64_64
+fadvise64
+fadvise64_64	223
 fallocate	47
 fanotify_init	262
 fanotify_mark	263
@@ -66,8 +66,8 @@ fchmodat	53
 fchown	55
 fchown32
 fchownat	54
-fcntl	25
-fcntl64
+fcntl
+fcntl64	25
 fdatasync	83
 fgetxattr	10
 finit_module	273
@@ -76,15 +76,15 @@ flock	32
 fork
 fremovexattr	16
 fsetxattr	7
-fstat	80
-fstat64
-fstatat64
-fstatfs	44
-fstatfs64
+fstat
+fstat64	80
+fstatat64	79
+fstatfs
+fstatfs64	44
 fsync	82
 ftime
-ftruncate	46
-ftruncate64
+ftruncate
+ftruncate64	46
 futex	98
 futimesat
 get_kernel_syms
@@ -160,7 +160,7 @@ llistxattr	12
 lock
 lookup_dcookie	18
 lremovexattr	15
-lseek	62
+lseek
 lsetxattr	6
 lstat
 lstat64
@@ -177,8 +177,8 @@ mknodat	33
 mlock	228
 mlock2	284
 mlockall	230
-mmap	222
-mmap2
+mmap
+mmap2	222
 modify_ldt
 mount	40
 move_pages	239
@@ -201,7 +201,7 @@ munlockall	231
 munmap	215
 name_to_handle_at	264
 nanosleep	101
-newfstatat	79
+newfstatat
 nfsservctl	42
 nice
 oldfstat
@@ -288,8 +288,8 @@ semget	190
 semop	193
 semtimedop	192
 send
-sendfile	71
-sendfile64
+sendfile
+sendfile64	71
 sendmmsg	269
 sendmsg	211
 sendto	206
@@ -348,8 +348,8 @@ splice	76
 ssetmask
 stat
 stat64
-statfs	43
-statfs64
+statfs
+statfs64	43
 stime
 stty
 swapoff	225
@@ -378,8 +378,8 @@ timerfd_gettime	87
 timerfd_settime	86
 times	153
 tkill	130
-truncate	45
-truncate64
+truncate
+truncate64	45
 tuxcall
 ugetrlimit
 ulimit
