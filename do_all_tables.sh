@@ -21,14 +21,22 @@ do
 	um)
 		continue;
 		;;
+	arm)
+		arch=armoabi	extraflags=				generate_table
+		arch=arm	extraflags=-D__ARM_EABI__		generate_table
+		;;
 	mips)
-				extraflags=-D_MIPS_SIM=_MIPS_SIM_ABI32	generate_table
+		arch=mipso32	extraflags=-D_MIPS_SIM=_MIPS_SIM_ABI32	generate_table
 		arch=mips64n32	extraflags=-D_MIPS_SIM=_MIPS_SIM_NABI32	generate_table
 		arch=mips64	extraflags=-D_MIPS_SIM=_MIPS_SIM_ABI64	generate_table
 		;;
-	x86)
+	tile)
 									generate_table
-		#arch=x32 	extraflags=-D__ILP32__			generate_table
+		arch=tile64	extraflags="-D__LP64__ -D__tilegx__"	generate_table
+		;;
+	x86)
+		arch=i386	                        		generate_table
+		arch=x32 	extraflags=-D__ILP32__			generate_table
 		arch=x86_64	extraflags=-D__LP64__			generate_table
 		;;
 	powerpc)
