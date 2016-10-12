@@ -14,37 +14,41 @@ for archdir in $KERNELSRC/arch/*
 do 
 	arch=`basename $archdir`
 
-	if [ "$arch" == 'mips' ]; then
+	case ${arch} in
+	Kconfig)
+		continue;
+		;;
+	um)
+		continue;
+		;;
+	mips)
+				generate_table
+		arch=mips64n32	generate_table
+		arch=mips64	generate_table
+		;;
+	x86)
+				generate_table
+		#arch=x32 	generate_table
+		arch=x86_64	generate_table
+		;;
+	powerpc)
+				generate_table
+		arch=powerpc64	generate_table
+		;;
+	s390)
+				generate_table
+		arch=s390x	generate_table
+		;;
+	sparc)
+				generate_table
+		arch=sparc64	generate_table
+		;;
+	sh)
+				generate_table
+		arch=sh64	generate_table
+		;;
+	*)
 		generate_table
-		arch=mips64n32
-		generate_table
-		arch=mips64
-		generate_table
-	elif [ "$arch" == 'x86' ]; then
-		generate_table
-#		arch=x32
-#		generate_table
-		arch=x86_64
-		generate_table
-	elif [ "$arch" == 'powerpc' ]; then
-		generate_table
-		arch=powerpc64
-		generate_table
-	elif [ "$arch" == 's390' ]; then
-		generate_table
-		arch=s390x
-		generate_table
-	elif [ "$arch" == 'sparc' ]; then
-		generate_table
-		arch=sparc64
-		generate_table
-	elif [ "$arch" == 'sh' ]; then
-		generate_table
-		arch=sh64
-		generate_table
-	elif [ "$arch" == 'Kconfig' ]; then
-		echo ""
-	else
-		generate_table
-	fi
+		;;
+	esac
 done
