@@ -70,8 +70,8 @@ table.tablesorter tbody tr.odd td {
 	background-color: lightgrey;
 }
 
-.legacy {
-        background-color: #b00
+.legacy, table.tablesorter tbody tr.odd td.legacy {
+        background-color: lightpink;
 }
     </style>
 </head>
