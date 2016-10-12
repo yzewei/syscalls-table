@@ -35,25 +35,40 @@ print("""
 <head>
     <title>System calls table for several architectures</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://resources.one.pl/js/jquery.tablesorter.js"></script>
+    <script src="https://fedora.juszkiewicz.com.pl/.js/jquery.tablesorter.js"></script>
+    <script src="https://fedora.juszkiewicz.com.pl/.js/jquery.stickytableheaders.min.js"></script>
     <script type="text/javascript" id="js">
             $(document).ready(function() {
             // call the tablesorter plugin
             $("table").tablesorter({textExtraction: "complex"});
+	    $('table').stickyTableHeaders();
     }); 
     </script>
     <style type="text/css">
+
 table.tablesorter {
 	border: 1px solid #000;
 }
+
 table.tablesorter th {
 	text-align: center;
 	padding: 0.5em;
+	line-height: 2em;
+	color: white;
 }
+
+table.tablesorter thead {
+	border: 1px solid black;
+	background-color: grey;
+}
+
 table.tablesorter td {
 	padding: 0.5em;
 }
-.legacy {background-color: #b00}
+
+.legacy {
+        background-color: #b00
+}
     </style>
 </head>
 <body>
