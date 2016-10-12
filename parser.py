@@ -34,43 +34,64 @@ print("""
 <html>
 <head>
     <title>System calls table for several architectures</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://fedora.juszkiewicz.com.pl/.js/jquery.tablesorter.js"></script>
-    <script src="https://fedora.juszkiewicz.com.pl/.js/jquery.stickytableheaders.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.3.2/css/colReorder.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.0/css/select.dataTables.min.css"/>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.3.2/js/dataTables.colReorder.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
     <script type="text/javascript" id="js">
             $(document).ready(function() {
-            // call the tablesorter plugin
-            $("table").tablesorter({textExtraction: "complex", widgets: ['zebra']});
-	    $('table').stickyTableHeaders();
+                    $("table").DataTable( {
+                            pageLength  : -1,
+                            fixedHeader : true,
+                            dom         : 'Bft',
+                            buttons     : [
+                            {
+                                    extend : 'colvis',
+                                    text: 'disable architectures',
+                                    columns: ':gt(0)'
+                            }
+                            ]
+                    });
     }); 
     </script>
     <style type="text/css">
 
-table.tablesorter {
-	border: 1px solid #000;
+table.syscalls {
+        border: 1px solid #000;
 }
 
-table.tablesorter th {
-	text-align: center;
-	padding: 0.5em;
-	line-height: 2em;
-	color: white;
+table.syscalls th {
+        text-align: center;
+        padding: 0.5em;
+        line-height: 2em;
+        color: white;
 }
 
-table.tablesorter thead {
-	border: 1px solid black;
-	background-color: grey;
+table.syscalls thead {
+        border: 1px solid black;
+        background-color: grey;
 }
 
-table.tablesorter td {
-	padding: 0.5em;
+table.syscalls td {
+        padding: 0.5em;
 }
 
-table.tablesorter tbody tr.odd td {
-	background-color: lightgrey;
+table.syscalls tbody tr.odd td {
+        background-color: lightgrey;
 }
 
-.legacy, table.tablesorter tbody tr.odd td.legacy {
+.legacy, table.syscalls tbody tr.odd td.legacy {
         background-color: lightpink;
 }
     </style>
@@ -102,7 +123,7 @@ print("""
     <p>
     Headers are clickable.
     </p>
-    <table class="tablesorter">
+    <table class="syscalls">
         <thead>
             <tr>
                 <th>system call</th>
