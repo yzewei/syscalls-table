@@ -10,9 +10,7 @@ And those numbers can be important for some projects (like Valgrind for example)
 
 ## How to help?
 
-Clone repo, run "make" to generate C source, compile it and run. You can substitute 
-C compiler with "CC" variable. Result will be "tables/syscalls-ARCHNAME" which you
-need to send back to me (preferred way is by pull request). ARCHNAME == "uname -m"
+Check issues list and work on any of them.
 
 ## Where to see?
 
