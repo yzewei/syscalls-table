@@ -7,7 +7,7 @@ import os
 
 syscalls = collections.OrderedDict()
 
-archs = []
+present_archs = []
 os.chdir('tables')
 for filename in os.listdir(os.getcwd()):
 
@@ -16,7 +16,7 @@ for filename in os.listdir(os.getcwd()):
 
         with open(filename, newline='') as csvh:
             seccompdata = csv.reader(csvh, delimiter="\t")
-            archs.append(arch)
+            present_archs.append(arch)
 
             for row in seccompdata:
                 try:
@@ -29,6 +29,18 @@ for filename in os.listdir(os.getcwd()):
 
     except IndexError:
         pass
+
+archs = ['arm64', 'arm', 'armoabi',
+          'x86_64', 'x32', 'i386',
+          'mips64', 'mips64n32', 'mipso32',
+          'powerpc64', 'powerpc',
+          's390x', 's390']
+
+for arch in sorted(present_archs):
+
+    if not arch in archs:
+        archs.append(arch)
+
 
 print("""
 <html>
@@ -140,7 +152,7 @@ print("""
                 <th>system call</th>
 """)
 
-for arch in sorted(archs):
+for arch in archs:
     print("<th>%s</th>" % arch)
 
 
@@ -163,7 +175,7 @@ for syscall in sorted(syscalls.keys()):
 
     print("<tr class='%s'><td><a href='http://www.man7.org/linux/man-pages/man2/%s.2.html'>%s</a></td>" % (trclass, syscall,syscall))
 
-    for arch in sorted(archs):
+    for arch in archs:
 
         try:
             syscallnr = syscalls[syscall][arch]
