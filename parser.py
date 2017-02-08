@@ -69,6 +69,7 @@ print("""
                     $("table").DataTable( {
                             pageLength  : -1,
                             fixedHeader : true,
+                            mark        : true,
                             dom         : 'Bft',
                             buttons     : [
                             {
