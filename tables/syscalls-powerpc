@@ -145,7 +145,7 @@ ioprio_get	274
 ioprio_set	273
 ipc	117
 kcmp	354
-kexec_file_load
+kexec_file_load	382
 kexec_load	268
 keyctl	271
 kill	37
@@ -222,6 +222,9 @@ personality	136
 pipe	42
 pipe2	317
 pivot_root	203
+pkey_alloc
+pkey_free
+pkey_mprotect
 poll	167
 ppoll	281
 prctl	171

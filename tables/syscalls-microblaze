@@ -34,7 +34,7 @@ clock_settime	264
 clone	120
 close	6
 connect	350
-copy_file_range
+copy_file_range	392
 creat	8
 create_module	127
 delete_module	129
@@ -222,12 +222,15 @@ personality	136
 pipe	42
 pipe2	343
 pivot_root	217
+pkey_alloc	396
+pkey_free	397
+pkey_mprotect	395
 poll	168
 ppoll	309
 prctl	172
 pread64	180
 preadv	363
-preadv2
+preadv2	393
 prlimit64	370
 process_vm_readv	377
 process_vm_writev	378
@@ -238,7 +241,7 @@ ptrace	26
 putpmsg	189
 pwrite64	181
 pwritev	364
-pwritev2
+pwritev2	394
 query_module	167
 quotactl	131
 read	3

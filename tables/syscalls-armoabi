@@ -222,6 +222,9 @@ personality	9437320
 pipe	9437226
 pipe2	9437543
 pivot_root	9437402
+pkey_alloc	9437579
+pkey_free	9437580
+pkey_mprotect	9437578
 poll	9437352
 ppoll	9437520
 prctl	9437356

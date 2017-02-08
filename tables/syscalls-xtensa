@@ -222,6 +222,9 @@ personality	131
 pipe	37
 pipe2	311
 pivot_root	175
+pkey_alloc	349
+pkey_free	350
+pkey_mprotect	348
 poll	16
 ppoll	273
 prctl	130
