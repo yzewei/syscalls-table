@@ -1,8 +1,9 @@
-#!/bin/python3
+#!/bin/python
 
 import collections
 import csv
 import datetime
+import io
 import os
 
 syscalls = collections.OrderedDict()
@@ -14,7 +15,7 @@ for filename in os.listdir(os.getcwd()):
     try:
         arch=filename.replace('syscalls-', '')
 
-        with open(filename, newline='') as csvh:
+        with io.open(filename, newline='') as csvh:
             seccompdata = csv.reader(csvh, delimiter="\t")
             present_archs.append(arch)
 
