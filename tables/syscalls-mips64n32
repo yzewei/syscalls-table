@@ -353,6 +353,7 @@ stat	6004
 stat64
 statfs	6134
 statfs64	6217
+statx
 stime
 stty
 swapoff	6163

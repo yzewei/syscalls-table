@@ -353,6 +353,7 @@ stat	106
 stat64
 statfs	99
 statfs64	265
+statx	379
 stime
 stty
 swapoff	115

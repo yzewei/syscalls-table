@@ -353,6 +353,7 @@ stat	1073741828
 stat64
 statfs	1073741961
 statfs64
+statx	1073742156
 stime
 stty
 swapoff	1073741992

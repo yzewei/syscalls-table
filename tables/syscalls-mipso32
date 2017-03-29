@@ -353,6 +353,7 @@ stat	4106
 stat64	4213
 statfs	4099
 statfs64	4255
+statx
 stime	4025
 stty	4031
 swapoff	4115
