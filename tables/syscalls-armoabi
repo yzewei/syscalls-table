@@ -12,7 +12,10 @@ alarm	9437211
 arch_prctl
 arm_fadvise64_64	9437454
 arm_sync_file_range	9437525
+atomic_barrier
+atomic_cmpxchg_32
 bdflush	9437318
+bfin_spinlock
 bind	9437466
 bpf	9437570
 break
@@ -32,12 +35,15 @@ clock_gettime	9437447
 clock_nanosleep	9437449
 clock_settime	9437446
 clone	9437304
+clone2
 close	9437190
 connect	9437467
 copy_file_range	9437575
 creat	9437192
 create_module
 delete_module	9437313
+dipc
+dma_memcpy
 dup	9437225
 dup2	9437247
 dup3	9437542
@@ -50,6 +56,7 @@ epoll_wait	9437436
 epoll_wait_old
 eventfd	9437535
 eventfd2	9437540
+execv
 execve	9437195
 execveat	9437571
 exit	9437185
@@ -95,6 +102,8 @@ getcpu	9437529
 getcwd	9437367
 getdents	9437325
 getdents64	9437401
+getdomainname
+getdtablesize
 getegid	9437234
 getegid32	9437386
 geteuid	9437233
@@ -103,7 +112,9 @@ getgid	9437231
 getgid32	9437384
 getgroups	9437264
 getgroups32	9437389
+gethostname
 getitimer	9437289
+getpagesize
 getpeername	9437471
 getpgid	9437316
 getpgrp	9437249
@@ -125,7 +136,11 @@ gettid	9437408
 gettimeofday	9437262
 getuid	9437208
 getuid32	9437383
+getunwind
 getxattr	9437413
+getxgid
+getxpid
+getxuid
 gtty
 idle
 init_module	9437312
@@ -145,6 +160,7 @@ ioprio_get	9437499
 ioprio_set	9437498
 ipc	9437301
 kcmp	9437562
+kern_features
 kexec_file_load
 kexec_load	9437531
 keyctl	9437495
@@ -165,6 +181,7 @@ lsetxattr	9437411
 lstat	9437291
 lstat64	9437380
 madvise	9437404
+madvise1
 mbind	9437503
 membarrier	9437573
 memfd_create	9437569
@@ -196,6 +213,7 @@ msgget	9437487
 msgrcv	9437486
 msgsnd	9437485
 msync	9437328
+multiplexer
 munlock	9437335
 munlockall	9437337
 munmap	9437275
@@ -203,21 +221,55 @@ name_to_handle_at	9437554
 nanosleep	9437346
 newfstatat
 nfsservctl	9437353
+ni_syscall
 nice	9437218
+old_adjtimex
 oldfstat
 oldlstat
 oldolduname
 oldstat
+oldumount
 olduname
 oldwait4
 open	9437189
 open_by_handle_at	9437555
 openat	9437506
+osf_fstat
+osf_fstatfs
+osf_fstatfs64
+osf_getdirentries
+osf_getdomainname
+osf_getitimer
+osf_getrusage
+osf_getsysinfo
+osf_gettimeofday
+osf_lstat
+osf_mount
+osf_proplist_syscall
+osf_select
+osf_set_program_attributes
+osf_setitimer
+osf_setsysinfo
+osf_settimeofday
+osf_shmat
+osf_sigprocmask
+osf_sigstack
+osf_stat
+osf_statfs
+osf_statfs64
+osf_swapon
+osf_sysinfo
+osf_usleep_thread
+osf_utimes
+osf_utsname
+osf_wait4
 pause	9437213
 pciconfig_iobase	9437455
 pciconfig_read	9437456
 pciconfig_write	9437457
 perf_event_open	9437548
+perfctr
+perfmonctl
 personality	9437320
 pipe	9437226
 pipe2	9437543
@@ -228,6 +280,7 @@ pkey_mprotect	9437578
 poll	9437352
 ppoll	9437520
 prctl	9437356
+pread
 pread64	9437364
 preadv	9437545
 preadv2	9437576
@@ -239,6 +292,7 @@ profil
 pselect6	9437519
 ptrace	9437210
 putpmsg
+pwrite
 pwrite64	9437365
 pwritev	9437546
 pwritev2	9437577
@@ -271,6 +325,10 @@ rt_sigreturn	9437357
 rt_sigsuspend	9437363
 rt_sigtimedwait	9437361
 rt_tgsigqueueinfo	9437547
+rtas
+s390_pci_mmio_read
+s390_pci_mmio_write
+s390_runtime_instr
 sched_get_priority_max	9437343
 sched_get_priority_min	9437344
 sched_getaffinity	9437426
@@ -309,10 +367,12 @@ setgid	9437230
 setgid32	9437398
 setgroups	9437265
 setgroups32	9437390
+sethae
 sethostname	9437258
 setitimer	9437288
 setns	9437559
 setpgid	9437241
+setpgrp
 setpriority	9437281
 setregid	9437255
 setregid32	9437388
@@ -347,7 +407,12 @@ sigsuspend	9437256
 socket	9437465
 socketcall	9437286
 socketpair	9437472
+spill
 splice	9437524
+spu_create
+spu_run
+sram_alloc
+sram_free
 ssetmask
 stat	9437290
 stat64	9437379
@@ -356,18 +421,26 @@ statfs64	9437450
 statx	9437581
 stime	9437209
 stty
+subpage_prot
+swapcontext
 swapoff	9437299
 swapon	9437271
+switch_endian
 symlink	9437267
 symlinkat	9437515
 sync	9437220
 sync_file_range
 sync_file_range2	9437525
 syncfs	9437557
+sys_debug_setcontext
+sys_epoll_create
+sys_epoll_ctl
+sys_epoll_wait
 sysfs	9437319
 sysinfo	9437300
 syslog	9437287
 sysmips
+tas
 tee	9437526
 tgkill	9437452
 time	9437197
@@ -400,6 +473,7 @@ ustat	9437246
 utime	9437214
 utimensat	9437532
 utimes	9437453
+utrap_install
 vfork	9437374
 vhangup	9437295
 vm86
@@ -411,3 +485,4 @@ waitid	9437464
 waitpid
 write	9437188
 writev	9437330
+xtensa

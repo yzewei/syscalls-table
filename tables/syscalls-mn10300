@@ -12,7 +12,10 @@ alarm	27
 arch_prctl
 arm_fadvise64_64
 arm_sync_file_range
+atomic_barrier
+atomic_cmpxchg_32
 bdflush	134
+bfin_spinlock
 bind
 bpf
 break	17
@@ -32,12 +35,15 @@ clock_gettime	265
 clock_nanosleep	267
 clock_settime	264
 clone	120
+clone2
 close	6
 connect
 copy_file_range
 creat	8
 create_module	127
 delete_module	129
+dipc
+dma_memcpy
 dup	41
 dup2	63
 dup3	331
@@ -50,6 +56,7 @@ epoll_wait	256
 epoll_wait_old
 eventfd	324
 eventfd2	329
+execv
 execve	11
 execveat
 exit	1
@@ -95,6 +102,8 @@ getcpu	319
 getcwd	183
 getdents	141
 getdents64	220
+getdomainname
+getdtablesize
 getegid	50
 getegid32	202
 geteuid	49
@@ -103,7 +112,9 @@ getgid	47
 getgid32	200
 getgroups	80
 getgroups32	205
+gethostname
 getitimer	105
+getpagesize
 getpeername
 getpgid	132
 getpgrp	65
@@ -125,7 +136,11 @@ gettid	224
 gettimeofday	78
 getuid	24
 getuid32	199
+getunwind
 getxattr	229
+getxgid
+getxpid
+getxuid
 gtty	32
 idle	112
 init_module	128
@@ -145,6 +160,7 @@ ioprio_get	291
 ioprio_set	290
 ipc	117
 kcmp
+kern_features
 kexec_file_load
 kexec_load	283
 keyctl	288
@@ -165,6 +181,7 @@ lsetxattr	227
 lstat	107
 lstat64	196
 madvise	219
+madvise1	219
 mbind	274
 membarrier
 memfd_create
@@ -196,6 +213,7 @@ msgget
 msgrcv
 msgsnd
 msync	144
+multiplexer
 munlock	151
 munlockall	153
 munmap	91
@@ -203,21 +221,55 @@ name_to_handle_at
 nanosleep	162
 newfstatat
 nfsservctl	169
+ni_syscall
 nice	34
+old_adjtimex
 oldfstat	28
 oldlstat	84
 oldolduname	59
 oldstat	18
+oldumount
 olduname	109
 oldwait4
 open	5
 open_by_handle_at
 openat	296
+osf_fstat
+osf_fstatfs
+osf_fstatfs64
+osf_getdirentries
+osf_getdomainname
+osf_getitimer
+osf_getrusage
+osf_getsysinfo
+osf_gettimeofday
+osf_lstat
+osf_mount
+osf_proplist_syscall
+osf_select
+osf_set_program_attributes
+osf_setitimer
+osf_setsysinfo
+osf_settimeofday
+osf_shmat
+osf_sigprocmask
+osf_sigstack
+osf_stat
+osf_statfs
+osf_statfs64
+osf_swapon
+osf_sysinfo
+osf_usleep_thread
+osf_utimes
+osf_utsname
+osf_wait4
 pause	29
 pciconfig_iobase
 pciconfig_read
 pciconfig_write
 perf_event_open	337
+perfctr
+perfmonctl
 personality	136
 pipe	42
 pipe2	332
@@ -228,6 +280,7 @@ pkey_mprotect
 poll	168
 ppoll	310
 prctl	172
+pread
 pread64	180
 preadv	334
 preadv2
@@ -239,6 +292,7 @@ profil	98
 pselect6	309
 ptrace	26
 putpmsg	189
+pwrite
 pwrite64	181
 pwritev	335
 pwritev2
@@ -271,6 +325,10 @@ rt_sigreturn	173
 rt_sigsuspend	179
 rt_sigtimedwait	177
 rt_tgsigqueueinfo	336
+rtas
+s390_pci_mmio_read
+s390_pci_mmio_write
+s390_runtime_instr
 sched_get_priority_max	159
 sched_get_priority_min	160
 sched_getaffinity	242
@@ -309,10 +367,12 @@ setgid	46
 setgid32	214
 setgroups	81
 setgroups32	206
+sethae
 sethostname	74
 setitimer	104
 setns	339
 setpgid	57
+setpgrp
 setpriority	97
 setregid	71
 setregid32	204
@@ -347,7 +407,12 @@ sigsuspend	72
 socket
 socketcall	102
 socketpair
+spill
 splice	314
+spu_create
+spu_run
+sram_alloc
+sram_free
 ssetmask	69
 stat	106
 stat64	195
@@ -356,18 +421,26 @@ statfs64	268
 statx
 stime	25
 stty	31
+subpage_prot
+swapcontext
 swapoff	115
 swapon	87
+switch_endian
 symlink	83
 symlinkat	305
 sync	36
 sync_file_range	315
 sync_file_range2
 syncfs
+sys_debug_setcontext
+sys_epoll_create
+sys_epoll_ctl
+sys_epoll_wait
 sysfs	135
 sysinfo	116
 syslog	103
 sysmips
+tas
 tee	316
 tgkill	270
 time	13
@@ -400,6 +473,7 @@ ustat	62
 utime	30
 utimensat	321
 utimes	271
+utrap_install
 vfork	190
 vhangup	111
 vm86	166
@@ -411,3 +485,4 @@ waitid	284
 waitpid	7
 write	4
 writev	146
+xtensa

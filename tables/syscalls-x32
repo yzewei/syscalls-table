@@ -12,7 +12,10 @@ alarm	1073741861
 arch_prctl	1073741982
 arm_fadvise64_64
 arm_sync_file_range
+atomic_barrier
+atomic_cmpxchg_32
 bdflush
+bfin_spinlock
 bind	1073741873
 bpf	1073742145
 break
@@ -32,12 +35,15 @@ clock_gettime	1073742052
 clock_nanosleep	1073742054
 clock_settime	1073742051
 clone	1073741880
+clone2
 close	1073741827
 connect	1073741866
 copy_file_range	1073742150
 creat	1073741909
 create_module
 delete_module	1073742000
+dipc
+dma_memcpy
 dup	1073741856
 dup2	1073741857
 dup3	1073742116
@@ -50,6 +56,7 @@ epoll_wait	1073742056
 epoll_wait_old
 eventfd	1073742108
 eventfd2	1073742114
+execv
 execve	1073742344
 execveat	1073742369
 exit	1073741884
@@ -95,6 +102,8 @@ getcpu	1073742133
 getcwd	1073741903
 getdents	1073741902
 getdents64	1073742041
+getdomainname
+getdtablesize
 getegid	1073741932
 getegid32
 geteuid	1073741931
@@ -103,7 +112,9 @@ getgid	1073741928
 getgid32
 getgroups	1073741939
 getgroups32
+gethostname
 getitimer	1073741860
+getpagesize
 getpeername	1073741876
 getpgid	1073741945
 getpgrp	1073741935
@@ -125,7 +136,11 @@ gettid	1073742010
 gettimeofday	1073741920
 getuid	1073741926
 getuid32
+getunwind
 getxattr	1073742015
+getxgid
+getxpid
+getxuid
 gtty
 idle
 init_module	1073741999
@@ -145,6 +160,7 @@ ioprio_get	1073742076
 ioprio_set	1073742075
 ipc
 kcmp	1073742136
+kern_features
 kexec_file_load	1073742144
 kexec_load	1073742352
 keyctl	1073742074
@@ -165,6 +181,7 @@ lsetxattr	1073742013
 lstat	1073741830
 lstat64
 madvise	1073741852
+madvise1
 mbind	1073742061
 membarrier	1073742148
 memfd_create	1073742143
@@ -196,6 +213,7 @@ msgget	1073741892
 msgrcv	1073741894
 msgsnd	1073741893
 msync	1073741850
+multiplexer
 munlock	1073741974
 munlockall	1073741976
 munmap	1073741835
@@ -203,21 +221,55 @@ name_to_handle_at	1073742127
 nanosleep	1073741859
 newfstatat	1073742086
 nfsservctl
+ni_syscall
 nice
+old_adjtimex
 oldfstat
 oldlstat
 oldolduname
 oldstat
+oldumount
 olduname
 oldwait4
 open	1073741826
 open_by_handle_at	1073742128
 openat	1073742081
+osf_fstat
+osf_fstatfs
+osf_fstatfs64
+osf_getdirentries
+osf_getdomainname
+osf_getitimer
+osf_getrusage
+osf_getsysinfo
+osf_gettimeofday
+osf_lstat
+osf_mount
+osf_proplist_syscall
+osf_select
+osf_set_program_attributes
+osf_setitimer
+osf_setsysinfo
+osf_settimeofday
+osf_shmat
+osf_sigprocmask
+osf_sigstack
+osf_stat
+osf_statfs
+osf_statfs64
+osf_swapon
+osf_sysinfo
+osf_usleep_thread
+osf_utimes
+osf_utsname
+osf_wait4
 pause	1073741858
 pciconfig_iobase
 pciconfig_read
 pciconfig_write
 perf_event_open	1073742122
+perfctr
+perfmonctl
 personality	1073741959
 pipe	1073741846
 pipe2	1073742117
@@ -228,6 +280,7 @@ pkey_mprotect	1073742153
 poll	1073741831
 ppoll	1073742095
 prctl	1073741981
+pread
 pread64	1073741841
 preadv	1073742358
 preadv2	1073742370
@@ -239,6 +292,7 @@ profil
 pselect6	1073742094
 ptrace	1073742345
 putpmsg	1073742006
+pwrite
 pwrite64	1073741842
 pwritev	1073742359
 pwritev2	1073742371
@@ -271,6 +325,10 @@ rt_sigreturn	1073742337
 rt_sigsuspend	1073741954
 rt_sigtimedwait	1073742347
 rt_tgsigqueueinfo	1073742360
+rtas
+s390_pci_mmio_read
+s390_pci_mmio_write
+s390_runtime_instr
 sched_get_priority_max	1073741970
 sched_get_priority_min	1073741971
 sched_getaffinity	1073742028
@@ -309,10 +367,12 @@ setgid	1073741930
 setgid32
 setgroups	1073741940
 setgroups32
+sethae
 sethostname	1073741994
 setitimer	1073741862
 setns	1073742132
 setpgid	1073741933
+setpgrp
 setpriority	1073741965
 setregid	1073741938
 setregid32
@@ -347,7 +407,12 @@ sigsuspend
 socket	1073741865
 socketcall
 socketpair	1073741877
+spill
 splice	1073742099
+spu_create
+spu_run
+sram_alloc
+sram_free
 ssetmask
 stat	1073741828
 stat64
@@ -356,18 +421,26 @@ statfs64
 statx	1073742156
 stime
 stty
+subpage_prot
+swapcontext
 swapoff	1073741992
 swapon	1073741991
+switch_endian
 symlink	1073741912
 symlinkat	1073742090
 sync	1073741986
 sync_file_range	1073742101
 sync_file_range2
 syncfs	1073742130
+sys_debug_setcontext
+sys_epoll_create
+sys_epoll_ctl
+sys_epoll_wait
 sysfs	1073741963
 sysinfo	1073741923
 syslog	1073741927
 sysmips
+tas
 tee	1073742100
 tgkill	1073742058
 time	1073742025
@@ -400,6 +473,7 @@ ustat	1073741960
 utime	1073741956
 utimensat	1073742104
 utimes	1073742059
+utrap_install
 vfork	1073741882
 vhangup	1073741977
 vm86
@@ -411,3 +485,4 @@ waitid	1073742353
 waitpid
 write	1073741825
 writev	1073742340
+xtensa
