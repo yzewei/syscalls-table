@@ -15,3 +15,12 @@ Check issues list and work on any of them.
 ## Where to see?
 
 I keep copy at https://fedora.juszkiewicz.com.pl/syscalls.html page.
+
+## How to run
+
+"make KERNELSRC=<path to Linux kernel tree>"
+
+It will run through all supported architectures. Any new system call will be added to the
+list. You can check that with "git diff syscall-names.text" - if there are any new ones
+then you have to run "make" for second time to make sure that all architectures are
+checked for new syscall.

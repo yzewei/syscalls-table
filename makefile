@@ -4,7 +4,7 @@ arch: list-syscalls
 	./list-syscalls |LC_ALL=C sort -u >tables/syscalls-$(shell uname -m)
 
 list-syscalls.c:
-	./update-list.sh | sed -e "s/'/\"/g">list-syscalls.c
+	./generate-list-syscalls.sh | sed -e "s/'/\"/g">list-syscalls.c
 
 list-syscalls: list-syscalls.c
 	$(CC) list-syscalls.c -o list-syscalls

@@ -2,14 +2,26 @@
 
 KERNELSRC=$1
 
+TMP=`mktemp`
+
 export_headers()
 {
 	make -s -C ${KERNELSRC} ARCH=${arch} O=${PWD}/headers headers_install
+
+	egrep -h "^#define __NR_" ${PWD}/headers/usr/include/asm/unistd.h ${PWD}/headers/usr/include/asm-generic/unistd.h |
+		egrep -v "(unistd.h|NR3264|__NR_syscall|__SC_COMP|__NR_.*Linux|__NR_FAST)" |
+		egrep -vi "(not implemented|available|unused|reserved)" |
+		egrep -v "(__SYSCALL|SYSCALL_BASE|arch_specific_syscall)" |
+		sed -e "s/#define\s*__NR_//g" -e "s/\s.*//g" |
+		sort -u >${TMP}
+	cat syscall-names.text >>${TMP}
+	LC_ALL=C sort -u ${TMP} >syscall-names.text
 }
 
 generate_table() 
 {
 	echo $arch
+
 	gcc list-syscalls.c -U__LP64__ -U__ILP32__ -U__i386__ -D${arch^^} \
 		-D__${arch}__ ${extraflags} -I headers/usr/include/ -o list-syscalls
 	./list-syscalls > "tables/syscalls-$arch"
