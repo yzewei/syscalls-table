@@ -10,7 +10,7 @@ export_headers()
 
 	egrep -h "^#define __NR_" ${PWD}/headers/usr/include/asm/unistd.h ${PWD}/headers/usr/include/asm-generic/unistd.h |
 		egrep -v "(unistd.h|NR3264|__NR_syscall|__SC_COMP|__NR_.*Linux|__NR_FAST)" |
-		egrep -vi "(not implemented|available|unused|reserved)" |
+		egrep -vi "(not implemented|available|unused|reserved|xtensa|spill)" |
 		egrep -v "(__SYSCALL|SYSCALL_BASE|arch_specific_syscall)" |
 		sed -e "s/#define\s*__NR_//g" -e "s/\s.*//g" |
 		sort -u >${TMP}

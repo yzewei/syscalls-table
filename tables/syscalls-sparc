@@ -407,7 +407,6 @@ sigsuspend	201
 socket	97
 socketcall	206
 socketpair	135
-spill
 splice	232
 spu_create
 spu_run
@@ -485,4 +484,3 @@ waitid	279
 waitpid	212
 write	4
 writev	121
-xtensa
