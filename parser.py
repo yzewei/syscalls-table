@@ -139,6 +139,14 @@ table.syscalls tbody tr.odd td {
     </ul>
     </p>
 
+<h1>Some notes</h1>
+    <p>
+
+    <ul>
+    <li>Table is updated at random moments - usually somewhere after rc1 kernel release</li>
+    <li>AVR32 architecture got dropped from Linux kernel - table has data for 4.11 kernel</li>
+    </ul>
+    </p>
 
 <h1>How to help</h1>
     <p>
