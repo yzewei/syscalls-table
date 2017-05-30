@@ -326,6 +326,7 @@ rt_sigsuspend	179
 rt_sigtimedwait	177
 rt_tgsigqueueinfo	330
 rtas
+s390_guarded_storage	378
 s390_pci_mmio_read	353
 s390_pci_mmio_write	352
 s390_runtime_instr	342

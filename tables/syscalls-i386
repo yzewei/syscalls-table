@@ -9,7 +9,7 @@ add_key	286
 adjtimex	124
 afs_syscall	137
 alarm	27
-arch_prctl
+arch_prctl	384
 arm_fadvise64_64
 arm_sync_file_range
 atomic_barrier
@@ -326,6 +326,7 @@ rt_sigsuspend	179
 rt_sigtimedwait	177
 rt_tgsigqueueinfo	335
 rtas
+s390_guarded_storage
 s390_pci_mmio_read
 s390_pci_mmio_write
 s390_runtime_instr
