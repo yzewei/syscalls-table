@@ -17,7 +17,7 @@ atomic_cmpxchg_32
 bdflush	300
 bfin_spinlock
 bind	104
-bpf
+bpf	515
 break
 brk	17
 cachectl
@@ -38,7 +38,7 @@ clone	312
 clone2
 close	6
 connect	98
-copy_file_range
+copy_file_range	519
 creat
 create_module	306
 delete_module	308
@@ -183,7 +183,7 @@ lstat64	426
 madvise	75
 madvise1
 mbind	429
-membarrier
+membarrier	517
 memfd_create	512
 migrate_pages	449
 mincore	375
@@ -192,7 +192,7 @@ mkdirat	451
 mknod	14
 mknodat	452
 mlock	314
-mlock2
+mlock2	518
 mlockall	316
 mmap	71
 mmap2
@@ -283,7 +283,7 @@ prctl	348
 pread
 pread64	349
 preadv	490
-preadv2
+preadv2	520
 prlimit64	496
 process_vm_readv	504
 process_vm_writev	505
@@ -295,7 +295,7 @@ putpmsg
 pwrite
 pwrite64	350
 pwritev	491
-pwritev2
+pwritev2	521
 query_module	347
 quotactl	148
 read	3
@@ -342,7 +342,7 @@ sched_setattr	508
 sched_setparam	330
 sched_setscheduler	332
 sched_yield	334
-seccomp
+seccomp	514
 security
 select	358
 semctl	204
@@ -418,7 +418,7 @@ stat	67
 stat64	425
 statfs	328
 statfs64
-statx
+statx	522
 stime
 stty
 subpage_prot
@@ -468,7 +468,7 @@ unlink	10
 unlinkat	456
 unshare	465
 uselib	313
-userfaultfd
+userfaultfd	516
 ustat	327
 utime
 utimensat	475
