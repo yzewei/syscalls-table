@@ -434,9 +434,6 @@ sync_file_range	1073742101
 sync_file_range2
 syncfs	1073742130
 sys_debug_setcontext
-sys_epoll_create
-sys_epoll_ctl
-sys_epoll_wait
 sysfs	1073741963
 sysinfo	1073741923
 syslog	1073741927

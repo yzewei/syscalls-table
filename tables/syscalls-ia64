@@ -434,9 +434,6 @@ sync_file_range	1300
 sync_file_range2
 syncfs	1329
 sys_debug_setcontext
-sys_epoll_create
-sys_epoll_ctl
-sys_epoll_wait
 sysfs	1139
 sysinfo	1127
 syslog	1117
