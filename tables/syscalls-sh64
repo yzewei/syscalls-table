@@ -330,6 +330,7 @@ s390_guarded_storage
 s390_pci_mmio_read
 s390_pci_mmio_write
 s390_runtime_instr
+s390_sthyi
 sched_get_priority_max	159
 sched_get_priority_min	160
 sched_getaffinity	270
