@@ -37,11 +37,16 @@ archs = ['arm64', 'arm', 'armoabi',
           'powerpc64', 'powerpc',
           's390x', 's390']
 
+removed_archs = ['avr32', 'blackfin', 'cris', 'frv', 'm32r', 'metag',
+                 'mn10300', 'score', 'tile']
+
 for arch in sorted(present_archs):
 
-    if not arch in archs:
+    if (not arch in removed_archs and not arch in archs):
         archs.append(arch)
 
+for arch in removed_archs:
+    archs.append(arch)
 
 print("""
 <html>
