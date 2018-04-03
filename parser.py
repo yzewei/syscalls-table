@@ -16,10 +16,10 @@ for filename in os.listdir(os.getcwd()):
         arch=filename.replace('syscalls-', '')
 
         with io.open(filename, newline='') as csvh:
-            seccompdata = csv.reader(csvh, delimiter="\t")
+            syscalldata = csv.reader(csvh, delimiter="\t")
             present_archs.append(arch)
 
-            for row in seccompdata:
+            for row in syscalldata:
                 try:
                     syscalls[row[0]][arch] = row[1]
                 except KeyError:
