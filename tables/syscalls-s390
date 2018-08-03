@@ -151,6 +151,7 @@ inotify_rm_watch	286
 io_cancel	247
 io_destroy	244
 io_getevents	245
+io_pgetevents	382
 io_setup	243
 io_submit	246
 ioctl	54
@@ -161,7 +162,7 @@ ioprio_set	282
 ipc	117
 kcmp	343
 kern_features
-kexec_file_load
+kexec_file_load	381
 kexec_load	277
 keyctl	280
 kill	37
@@ -317,6 +318,7 @@ renameat2	347
 request_key	279
 restart_syscall	7
 rmdir	40
+rseq	383
 rt_sigaction	174
 rt_sigpending	176
 rt_sigprocmask	175

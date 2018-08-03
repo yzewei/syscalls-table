@@ -151,6 +151,7 @@ inotify_rm_watch	1073742079
 io_cancel	1073742034
 io_destroy	1073742031
 io_getevents	1073742032
+io_pgetevents	1073742157
 io_setup	1073742367
 io_submit	1073742368
 ioctl	1073742338
@@ -317,6 +318,7 @@ renameat2	1073742140
 request_key	1073742073
 restart_syscall	1073742043
 rmdir	1073741908
+rseq	1073742158
 rt_sigaction	1073742336
 rt_sigpending	1073742346
 rt_sigprocmask	1073741838

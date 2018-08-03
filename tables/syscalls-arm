@@ -151,6 +151,7 @@ inotify_rm_watch	318
 io_cancel	247
 io_destroy	244
 io_getevents	245
+io_pgetevents
 io_setup	243
 io_submit	246
 ioctl	54
@@ -317,6 +318,7 @@ renameat2	382
 request_key	310
 restart_syscall	0
 rmdir	40
+rseq	398
 rt_sigaction	174
 rt_sigpending	176
 rt_sigprocmask	175
