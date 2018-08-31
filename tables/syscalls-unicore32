@@ -318,7 +318,7 @@ renameat2	276
 request_key	218
 restart_syscall	128
 rmdir
-rseq
+rseq	293
 rt_sigaction	134
 rt_sigpending	136
 rt_sigprocmask	135
