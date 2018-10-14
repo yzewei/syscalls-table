@@ -151,7 +151,7 @@ inotify_rm_watch	9437502
 io_cancel	9437431
 io_destroy	9437428
 io_getevents	9437429
-io_pgetevents
+io_pgetevents	9437583
 io_setup	9437427
 io_submit	9437430
 ioctl	9437238
