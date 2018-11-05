@@ -9,6 +9,9 @@ add_key	6243
 adjtimex	6154
 afs_syscall	6176
 alarm	6037
+arc_gettls
+arc_settls
+arc_usr_cmpxchg
 arch_prctl
 arm_fadvise64_64
 arm_sync_file_range
@@ -20,6 +23,7 @@ bind	6048
 bpf	6319
 break
 brk	6012
+cache_sync
 cachectl	6198
 cacheflush	6197
 capget	6123
@@ -235,6 +239,7 @@ oldwait4
 open	6002
 open_by_handle_at	6304
 openat	6251
+or1k_atomic
 osf_fstat
 osf_fstatfs
 osf_fstatfs64
@@ -317,6 +322,7 @@ renameat	6258
 renameat2	6315
 request_key	6244
 restart_syscall	6214
+riscv_flush_icache
 rmdir	6082
 rseq	6331
 rt_sigaction	6013

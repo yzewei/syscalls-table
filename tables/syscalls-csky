@@ -25,7 +25,7 @@ break
 brk	214
 cache_sync
 cachectl
-cacheflush
+cacheflush	245
 capget	90
 capset	91
 chdir	49
@@ -88,8 +88,8 @@ fork
 fremovexattr	16
 fsetxattr	7
 fstat
-fstat64	80
-fstatat64	79
+fstat64
+fstatat64
 fstatfs
 fstatfs64	44
 fsync	82
@@ -99,7 +99,7 @@ ftruncate64	46
 futex	98
 futimesat
 get_kernel_syms
-get_mempolicy
+get_mempolicy	236
 get_robust_list	100
 get_thread_area
 getcpu	168
@@ -185,26 +185,26 @@ lseek
 lsetxattr	6
 lstat
 lstat64
-madvise
+madvise	233
 madvise1
-mbind
+mbind	235
 membarrier	283
 memfd_create	279
-migrate_pages
-mincore
+migrate_pages	238
+mincore	232
 mkdir
 mkdirat	34
 mknod
 mknodat	33
-mlock
+mlock	228
 mlock2	284
-mlockall
+mlockall	230
 mmap
 mmap2	222
 modify_ldt
 mount	40
-move_pages
-mprotect
+move_pages	239
+mprotect	226
 mpx
 mq_getsetattr	185
 mq_notify	184
@@ -217,10 +217,10 @@ msgctl	187
 msgget	186
 msgrcv	188
 msgsnd	189
-msync
+msync	227
 multiplexer
-munlock
-munlockall
+munlock	229
+munlockall	231
 munmap	215
 name_to_handle_at	264
 nanosleep	101
@@ -315,10 +315,10 @@ recv
 recvfrom	207
 recvmmsg	243
 recvmsg	212
-remap_file_pages
+remap_file_pages	234
 removexattr	14
 rename
-renameat	38
+renameat
 renameat2	276
 request_key	218
 restart_syscall	128
@@ -364,9 +364,9 @@ sendfile64	71
 sendmmsg	269
 sendmsg	211
 sendto	206
-set_mempolicy
+set_mempolicy	237
 set_robust_list	99
-set_thread_area
+set_thread_area	244
 set_tid_address	96
 setdomainname	162
 setfsgid	152
@@ -432,8 +432,8 @@ stime
 stty
 subpage_prot
 swapcontext
-swapoff
-swapon
+swapoff	225
+swapon	224
 switch_endian
 symlink
 symlinkat	36

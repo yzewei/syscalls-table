@@ -9,6 +9,9 @@ add_key	1073742072
 adjtimex	1073741983
 afs_syscall	1073742007
 alarm	1073741861
+arc_gettls
+arc_settls
+arc_usr_cmpxchg
 arch_prctl	1073741982
 arm_fadvise64_64
 arm_sync_file_range
@@ -20,6 +23,7 @@ bind	1073741873
 bpf	1073742145
 break
 brk	1073741836
+cache_sync
 cachectl
 cacheflush
 capget	1073741949
@@ -235,6 +239,7 @@ oldwait4
 open	1073741826
 open_by_handle_at	1073742128
 openat	1073742081
+or1k_atomic
 osf_fstat
 osf_fstatfs
 osf_fstatfs64
@@ -317,6 +322,7 @@ renameat	1073742088
 renameat2	1073742140
 request_key	1073742073
 restart_syscall	1073742043
+riscv_flush_icache
 rmdir	1073741908
 rseq	1073742158
 rt_sigaction	1073742336
