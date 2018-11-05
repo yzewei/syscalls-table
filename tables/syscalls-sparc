@@ -151,7 +151,7 @@ inotify_rm_watch	156
 io_cancel	271
 io_destroy	269
 io_getevents	272
-io_pgetevents
+io_pgetevents	361
 io_setup	268
 io_submit	270
 ioctl	54
