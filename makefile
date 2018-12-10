@@ -1,3 +1,5 @@
+KVER := $(shell make -C ${KERNELSRC} kernelversion -s)
+
 all: tables out/syscalls.html
 
 arch: list-syscalls
@@ -13,7 +15,7 @@ FORCE:
 
 out/syscalls.html: FORCE
 	mkdir -p out
-	./parser.py >out/syscalls.html
+	./parser.py >out/syscalls.html ${KVER}
 
 clean:
 	rm -rf list-syscalls list-syscalls.c out/syscalls.html headers

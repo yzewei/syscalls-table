@@ -5,6 +5,13 @@ import csv
 import datetime
 import io
 import os
+import sys
+
+
+kernel_version = ''
+
+if len(sys.argv) > 1:
+    kernel_version = sys.argv[1]
 
 syscalls = collections.OrderedDict()
 
@@ -162,6 +169,11 @@ table.syscalls tbody tr.odd td {
     </p>
 """)
 
+print("""
+<h1>Build info</h1>
+    <p>Table generated on <strong>%s</strong> using data from <strong>%s</strong> kernel source.</p>
+""" % (datetime.datetime.strftime(datetime.datetime.utcnow(),
+    "%Y.%m.%d %H:%M"), kernel_version))
 
 print("""
     <table class="syscalls">
@@ -213,7 +225,6 @@ for syscall in sorted(syscalls.keys()):
 print("""
         </tbody>
     </table>
-    <p>Table generated on %s</p>
 </body>
 </html>
-""" % datetime.datetime.strftime(datetime.datetime.utcnow(), "%Y.%m.%d %H:%M"))
+""")
