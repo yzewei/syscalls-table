@@ -150,6 +150,7 @@ table.syscalls tbody tr.odd td {
     <ul>
     <li>Table is updated at random moments - usually somewhere after rc1 kernel release</li>
     <li>Avr32, blackfin, cris, frv, m32r, metag, mn10300, score, tile architectures got dropped from Linux kernel - old data used.</li>
+    <li>RISC-V got split into 32- and 64-bit
     </ul>
     </p>
 

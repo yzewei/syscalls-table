@@ -63,6 +63,10 @@ do
 		arch=x32 	extraflags=-D__ILP32__			generate_table
 		arch=x86_64	extraflags=-D__LP64__			generate_table
 		;;
+	riscv)
+		arch=riscv32	                        		generate_table
+		arch=riscv64	extraflags=-D__LP64__			generate_table
+		;;
 	powerpc)
 									generate_table
 		arch=powerpc64						generate_table
