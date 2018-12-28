@@ -166,7 +166,7 @@ ioprio_set	30
 ipc
 kcmp	272
 kern_features
-kexec_file_load
+kexec_file_load	294
 kexec_load	104
 keyctl	219
 kill	129

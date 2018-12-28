@@ -485,7 +485,7 @@ vhangup	76
 vm86
 vm86old
 vmsplice	25
-vserver
+vserver	267
 wait4	7
 waitid	279
 waitpid	212
