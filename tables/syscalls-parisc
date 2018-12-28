@@ -7,7 +7,7 @@ access	33
 acct	51
 add_key	264
 adjtimex	124
-afs_syscall	137
+afs_syscall
 alarm	27
 arc_gettls
 arc_settls
@@ -44,7 +44,7 @@ close	6
 connect	31
 copy_file_range	346
 creat	8
-create_module	127
+create_module
 delete_module	129
 dipc
 dma_memcpy
@@ -98,10 +98,10 @@ ftruncate	93
 ftruncate64	200
 futex	210
 futimesat	279
-get_kernel_syms	130
+get_kernel_syms
 get_mempolicy	261
 get_robust_list	290
-get_thread_area	214
+get_thread_area
 getcpu	296
 getcwd	110
 getdents	141
@@ -123,7 +123,7 @@ getpeername	53
 getpgid	132
 getpgrp	65
 getpid	20
-getpmsg	196
+getpmsg
 getppid	64
 getpriority	96
 getrandom	339
@@ -225,7 +225,7 @@ munmap	91
 name_to_handle_at	325
 nanosleep	162
 newfstatat
-nfsservctl	169
+nfsservctl
 ni_syscall
 nice	34
 old_adjtimex
@@ -297,12 +297,12 @@ prof
 profil
 pselect6	273
 ptrace	26
-putpmsg	197
+putpmsg
 pwrite
 pwrite64	109
 pwritev	316
 pwritev2	348
-query_module	167
+query_module
 quotactl	131
 read	3
 readahead	207
@@ -366,7 +366,7 @@ sendmsg	183
 sendto	82
 set_mempolicy	262
 set_robust_list	289
-set_thread_area	213
+set_thread_area
 set_tid_address	237
 setdomainname	121
 setfsgid	139
@@ -455,7 +455,7 @@ timer_delete	254
 timer_getoverrun	253
 timer_gettime	252
 timer_settime	251
-timerfd	303
+timerfd
 timerfd_create	306
 timerfd_gettime	308
 timerfd_settime	307
@@ -485,7 +485,7 @@ vhangup	111
 vm86
 vm86old
 vmsplice	294
-vserver	263
+vserver
 wait4	114
 waitid	235
 waitpid	7
