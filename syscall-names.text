@@ -464,6 +464,7 @@ tkill
 truncate
 truncate64
 tuxcall
+udftrap
 ugetrlimit
 ulimit
 umask
