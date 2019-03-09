@@ -324,7 +324,7 @@ request_key	257
 restart_syscall	223
 riscv_flush_icache
 rmdir	39
-rseq
+rseq	352
 rt_sigaction	226
 rt_sigpending	228
 rt_sigprocmask	227

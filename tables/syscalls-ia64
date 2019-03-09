@@ -155,7 +155,7 @@ inotify_rm_watch	1279
 io_cancel	1242
 io_destroy	1239
 io_getevents	1240
-io_pgetevents
+io_pgetevents	1351
 io_setup	1238
 io_submit	1241
 ioctl	1065
@@ -273,16 +273,16 @@ pause
 pciconfig_iobase
 pciconfig_read	1173
 pciconfig_write	1174
-perf_event_open
+perf_event_open	1352
 perfctr
 perfmonctl	1175
 personality	1140
 pipe	1058
 pipe2	1317
 pivot_root	1207
-pkey_alloc
-pkey_free
-pkey_mprotect
+pkey_alloc	1355
+pkey_free	1356
+pkey_mprotect	1354
 poll	1090
 ppoll	1295
 prctl	1170
@@ -324,7 +324,7 @@ request_key	1272
 restart_syscall	1246
 riscv_flush_icache
 rmdir	1056
-rseq
+rseq	1357
 rt_sigaction	1177
 rt_sigpending	1178
 rt_sigprocmask	1179
@@ -351,7 +351,7 @@ sched_setattr	1336
 sched_setparam	1161
 sched_setscheduler	1163
 sched_yield	1164
-seccomp
+seccomp	1353
 security
 select	1089
 semctl	1108
@@ -427,7 +427,7 @@ stat	1210
 stat64
 statfs	1103
 statfs64	1258
-statx
+statx	1350
 stime
 stty
 subpage_prot
@@ -468,7 +468,7 @@ ugetrlimit
 ulimit
 umask	1067
 umount	1044
-umount2
+umount2	1044
 uname	1130
 unlink	1032
 unlinkat	1287

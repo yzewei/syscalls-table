@@ -213,10 +213,10 @@ mq_timedreceive	4274
 mq_timedsend	4273
 mq_unlink	4272
 mremap	4167
-msgctl
-msgget
-msgrcv
-msgsnd
+msgctl	4402
+msgget	4399
+msgrcv	4401
+msgsnd	4400
 msync	4144
 multiplexer
 munlock	4155
@@ -354,8 +354,8 @@ sched_yield	4162
 seccomp	4352
 security
 select
-semctl
-semget
+semctl	4394
+semget	4393
 semop
 semtimedop
 send	4178
@@ -400,10 +400,10 @@ setuid	4023
 setuid32
 setxattr	4224
 sgetmask	4068
-shmat
-shmctl
-shmdt
-shmget
+shmat	4397
+shmctl	4396
+shmdt	4398
+shmget	4395
 shutdown	4182
 sigaction	4067
 sigaltstack	4206

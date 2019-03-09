@@ -166,7 +166,7 @@ ioprio_set	9437498
 ipc	9437301
 kcmp	9437562
 kern_features
-kexec_file_load
+kexec_file_load	9437585
 kexec_load	9437531
 keyctl	9437495
 kill	9437221
@@ -190,7 +190,7 @@ madvise1
 mbind	9437503
 membarrier	9437573
 memfd_create	9437569
-migrate_pages
+migrate_pages	9437584
 mincore	9437403
 mkdir	9437223
 mkdirat	9437507

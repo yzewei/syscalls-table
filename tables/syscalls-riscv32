@@ -131,7 +131,7 @@ getresgid	150
 getresgid32
 getresuid	148
 getresuid32
-getrlimit	163
+getrlimit
 getrusage	165
 getsid	156
 getsockname	204
@@ -392,7 +392,7 @@ setresuid	147
 setresuid32
 setreuid	145
 setreuid32
-setrlimit	164
+setrlimit
 setsid	157
 setsockopt	208
 settimeofday	170

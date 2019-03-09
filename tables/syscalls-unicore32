@@ -88,8 +88,8 @@ fork
 fremovexattr	16
 fsetxattr	7
 fstat
-fstat64
-fstatat64
+fstat64	80
+fstatat64	79
 fstatfs
 fstatfs64	44
 fsync	82

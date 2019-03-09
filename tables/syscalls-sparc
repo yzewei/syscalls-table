@@ -213,10 +213,10 @@ mq_timedreceive	276
 mq_timedsend	275
 mq_unlink	274
 mremap	250
-msgctl
-msgget
-msgrcv
-msgsnd
+msgctl	402
+msgget	399
+msgrcv	401
+msgsnd	400
 msync	65
 multiplexer
 munlock	238
@@ -280,9 +280,9 @@ personality	191
 pipe	42
 pipe2	321
 pivot_root	146
-pkey_alloc
-pkey_free
-pkey_mprotect
+pkey_alloc	363
+pkey_free	364
+pkey_mprotect	362
 poll	153
 ppoll	298
 prctl	147
@@ -324,7 +324,7 @@ request_key	282
 restart_syscall	0
 riscv_flush_icache
 rmdir	137
-rseq
+rseq	365
 rt_sigaction	102
 rt_sigpending	104
 rt_sigprocmask	103
@@ -354,8 +354,8 @@ sched_yield	245
 seccomp	346
 security
 select	93
-semctl
-semget
+semctl	394
+semget	393
 semop
 semtimedop
 send
@@ -400,10 +400,10 @@ setuid	23
 setuid32	87
 setxattr	169
 sgetmask	199
-shmat
-shmctl
-shmdt
-shmget
+shmat	397
+shmctl	396
+shmdt	398
+shmget	395
 shutdown	134
 sigaction	198
 sigaltstack	28

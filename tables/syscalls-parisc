@@ -280,9 +280,9 @@ personality	136
 pipe	42
 pipe2	313
 pivot_root	67
-pkey_alloc
-pkey_free
-pkey_mprotect
+pkey_alloc	352
+pkey_free	353
+pkey_mprotect	351
 poll	168
 ppoll	274
 prctl	172
@@ -324,7 +324,7 @@ request_key	265
 restart_syscall	0
 riscv_flush_icache
 rmdir	40
-rseq
+rseq	354
 rt_sigaction	174
 rt_sigpending	176
 rt_sigprocmask	175

@@ -91,7 +91,7 @@ fstat	91
 fstat64	427
 fstatat64	455
 fstatfs	329
-fstatfs64
+fstatfs64	529
 fsync	95
 ftime
 ftruncate	130
@@ -108,11 +108,11 @@ getdents	305
 getdents64	377
 getdomainname
 getdtablesize	89
-getegid
+getegid	530
 getegid32
-geteuid
+geteuid	531
 geteuid32
-getgid
+getgid	47
 getgid32
 getgroups	79
 getgroups32
@@ -122,9 +122,9 @@ getpagesize	64
 getpeername	141
 getpgid	233
 getpgrp	63
-getpid
+getpid	20
 getpmsg
-getppid
+getppid	532
 getpriority	100
 getrandom	511
 getresgid	372
@@ -138,7 +138,7 @@ getsockname	150
 getsockopt	118
 gettid	378
 gettimeofday	359
-getuid
+getuid	24
 getuid32
 getunwind
 getxattr	385
@@ -155,7 +155,7 @@ inotify_rm_watch	446
 io_cancel	402
 io_destroy	399
 io_getevents	400
-io_pgetevents
+io_pgetevents	523
 io_setup	398
 io_submit	401
 ioctl	54
@@ -280,9 +280,9 @@ personality	324
 pipe	42
 pipe2	488
 pivot_root	374
-pkey_alloc
-pkey_free
-pkey_mprotect
+pkey_alloc	525
+pkey_free	526
+pkey_mprotect	524
 poll	94
 ppoll	464
 prctl	348
@@ -324,7 +324,7 @@ request_key	440
 restart_syscall	412
 riscv_flush_icache
 rmdir	137
-rseq
+rseq	527
 rt_sigaction	352
 rt_sigpending	354
 rt_sigprocmask	353
@@ -400,7 +400,7 @@ setuid	23
 setuid32
 setxattr	382
 sgetmask
-shmat
+shmat	209
 shmctl	210
 shmdt	211
 shmget	212
@@ -426,7 +426,7 @@ ssetmask
 stat	67
 stat64	425
 statfs	328
-statfs64
+statfs64	528
 statx	522
 stime
 stty
@@ -468,7 +468,7 @@ ugetrlimit
 ulimit
 umask	60
 umount	22
-umount2
+umount2	22
 uname	339
 unlink	10
 unlinkat	456

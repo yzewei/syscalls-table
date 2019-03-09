@@ -166,7 +166,7 @@ ioprio_set	314
 ipc
 kcmp	378
 kern_features
-kexec_file_load
+kexec_file_load	401
 kexec_load	347
 keyctl	311
 kill	37
@@ -190,7 +190,7 @@ madvise1
 mbind	319
 membarrier	389
 memfd_create	385
-migrate_pages
+migrate_pages	400
 mincore	219
 mkdir	39
 mkdirat	323
