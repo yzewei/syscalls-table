@@ -53,8 +53,9 @@ for arch in removed_archs:
     archs.append(arch)
 
 print("""
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
     <title>System calls table for several architectures</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -137,8 +138,7 @@ table.syscalls tbody tr.odd td {
     below.
     </p>
 <h1>How to use</h1>
-    <p>
-    There are few features you can use:
+    <p>There are few features you can use:</p>
 
     <ul>
     <li>search field allows to filter table by syscall name or number</li>
@@ -146,17 +146,14 @@ table.syscalls tbody tr.odd td {
     <li>'disable architectures' button allows to disable not needed columns</li>
     <li>clicking on header entries sorts table</li>
     </ul>
-    </p>
 
 <h1>Some notes</h1>
-    <p>
 
     <ul>
     <li>Table is updated at random moments - usually somewhere after rc1 kernel release</li>
     <li>Avr32, blackfin, cris, frv, m32r, metag, mn10300, score, tile architectures got dropped from Linux kernel - old data used.</li>
     <li>RISC-V got split into 32- and 64-bit
     </ul>
-    </p>
 
 <h1>How to help</h1>
     <p>
