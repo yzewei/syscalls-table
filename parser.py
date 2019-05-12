@@ -20,7 +20,7 @@ os.chdir('tables')
 for filename in os.listdir(os.getcwd()):
 
     try:
-        arch=filename.replace('syscalls-', '')
+        arch = filename.replace('syscalls-', '')
 
         with io.open(filename, newline='') as csvh:
             syscalldata = csv.reader(csvh, delimiter="\t")
@@ -38,18 +38,15 @@ for filename in os.listdir(os.getcwd()):
     except IndexError:
         pass
 
-archs = ['arm64', 'arm', 'armoabi',
-          'x86_64', 'x32', 'i386',
-          'mips64', 'mips64n32', 'mipso32',
-          'powerpc64', 'powerpc',
-          's390x', 's390']
+archs = ['arm64', 'arm', 'armoabi', 'x86_64', 'x32', 'i386', 'mips64',
+         'mips64n32', 'mipso32', 'powerpc64', 'powerpc', 's390x', 's390']
 
 removed_archs = ['avr32', 'blackfin', 'cris', 'frv', 'm32r', 'metag',
                  'mn10300', 'score', 'tile']
 
 for arch in sorted(present_archs):
 
-    if (not arch in removed_archs and not arch in archs):
+    if (arch not in removed_archs and arch not in archs):
         archs.append(arch)
 
 for arch in removed_archs:
@@ -91,7 +88,7 @@ print("""
                             }
                             ]
                     });
-    }); 
+    });
     </script>
     <style type="text/css">
 
@@ -142,7 +139,7 @@ table.syscalls tbody tr.odd td {
 <h1>How to use</h1>
     <p>
     There are few features you can use:
-    
+
     <ul>
     <li>search field allows to filter table by syscall name or number</li>
     <li>system call names link to their man pages</li>
@@ -173,7 +170,7 @@ print("""
 <h1>Build info</h1>
     <p>Table generated on <strong>%s</strong> using data from <strong>%s</strong> kernel source.</p>
 """ % (datetime.datetime.strftime(datetime.datetime.utcnow(),
-    "%Y.%m.%d %H:%M"), kernel_version))
+                                  "%Y.%m.%d %H:%M"), kernel_version))
 
 print("""
     <table class="syscalls">
@@ -203,7 +200,7 @@ for syscall in sorted(syscalls.keys()):
 
     oddeven += 1
 
-    print("<tr class='%s'><td><a href='http://www.man7.org/linux/man-pages/man2/%s.2.html'>%s</a></td>" % (trclass, syscall,syscall))
+    print("<tr class='%s'><td><a href='http://www.man7.org/linux/man-pages/man2/%s.2.html'>%s</a></td>" % (trclass, syscall, syscall))
 
     for arch in archs:
 
