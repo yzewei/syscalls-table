@@ -34,10 +34,15 @@ chown	1073741916
 chown32
 chroot	1073741985
 clock_adjtime	1073742129
+clock_adjtime64
 clock_getres	1073742053
+clock_getres_time64
 clock_gettime	1073742052
+clock_gettime64
 clock_nanosleep	1073742054
+clock_nanosleep_time64
 clock_settime	1073742051
+clock_settime64
 clone	1073741880
 clone2
 close	1073741827
@@ -60,6 +65,7 @@ epoll_wait	1073742056
 epoll_wait_old
 eventfd	1073742108
 eventfd2	1073742114
+exec_with_loader
 execv
 execve	1073742344
 execveat	1073742369
@@ -86,7 +92,11 @@ flistxattr	1073742020
 flock	1073741897
 fork	1073741881
 fremovexattr	1073742023
+fsconfig	1073742162
 fsetxattr	1073742014
+fsmount	1073742163
+fsopen	1073742161
+fspick	1073742164
 fstat	1073741829
 fstat64
 fstatat64
@@ -97,6 +107,7 @@ ftime
 ftruncate	1073741901
 ftruncate64
 futex	1073742026
+futex_time64
 futimesat	1073742085
 get_kernel_syms
 get_mempolicy	1073742063
@@ -156,8 +167,12 @@ io_cancel	1073742034
 io_destroy	1073742031
 io_getevents	1073742032
 io_pgetevents	1073742157
+io_pgetevents_time64
 io_setup	1073742367
 io_submit	1073742368
+io_uring_enter	1073742250
+io_uring_register	1073742251
+io_uring_setup	1073742249
 ioctl	1073742338
 ioperm	1073741997
 iopl	1073741996
@@ -190,6 +205,7 @@ madvise1
 mbind	1073742061
 membarrier	1073742148
 memfd_create	1073742143
+memory_ordering
 migrate_pages	1073742080
 mincore	1073741851
 mkdir	1073741907
@@ -203,6 +219,7 @@ mmap	1073741833
 mmap2
 modify_ldt	1073741978
 mount	1073741989
+move_mount	1073742160
 move_pages	1073742357
 mprotect	1073741834
 mpx
@@ -210,7 +227,9 @@ mq_getsetattr	1073742069
 mq_notify	1073742351
 mq_open	1073742064
 mq_timedreceive	1073742067
+mq_timedreceive_time64
 mq_timedsend	1073742066
+mq_timedsend_time64
 mq_unlink	1073742065
 mremap	1073741849
 msgctl	1073741895
@@ -238,37 +257,119 @@ olduname
 oldwait4
 open	1073741826
 open_by_handle_at	1073742128
+open_tree	1073742159
 openat	1073742081
 or1k_atomic
+osf_adjtime
+osf_afs_syscall
+osf_alt_plock
+osf_alt_setsid
+osf_alt_sigpending
+osf_asynch_daemon
+osf_audcntl
+osf_audgen
+osf_chflags
+osf_execve
+osf_exportfs
+osf_fchflags
+osf_fdatasync
+osf_fpathconf
 osf_fstat
 osf_fstatfs
 osf_fstatfs64
+osf_fuser
+osf_getaddressconf
 osf_getdirentries
 osf_getdomainname
+osf_getfh
+osf_getfsstat
+osf_gethostid
 osf_getitimer
+osf_getlogin
+osf_getmnt
 osf_getrusage
 osf_getsysinfo
 osf_gettimeofday
+osf_kloadcall
+osf_kmodcall
 osf_lstat
+osf_memcntl
+osf_mincore
 osf_mount
+osf_mremap
+osf_msfs_syscall
+osf_msleep
+osf_mvalid
+osf_mwakeup
+osf_naccept
+osf_nfssvc
+osf_ngetpeername
+osf_ngetsockname
+osf_nrecvfrom
+osf_nrecvmsg
+osf_nsendmsg
+osf_ntp_adjtime
+osf_ntp_gettime
+osf_old_creat
+osf_old_fstat
+osf_old_getpgrp
+osf_old_killpg
+osf_old_lstat
+osf_old_open
+osf_old_sigaction
+osf_old_sigblock
+osf_old_sigreturn
+osf_old_sigsetmask
+osf_old_sigvec
+osf_old_stat
+osf_old_vadvise
+osf_old_vtrace
+osf_old_wait
+osf_oldquota
+osf_pathconf
+osf_pid_block
+osf_pid_unblock
+osf_plock
+osf_priocntlset
+osf_profil
 osf_proplist_syscall
+osf_reboot
+osf_revoke
+osf_sbrk
+osf_security
 osf_select
 osf_set_program_attributes
+osf_set_speculative
+osf_sethostid
 osf_setitimer
+osf_setlogin
 osf_setsysinfo
 osf_settimeofday
 osf_shmat
+osf_signal
 osf_sigprocmask
+osf_sigsendset
 osf_sigstack
+osf_sigwaitprim
+osf_sstk
 osf_stat
 osf_statfs
 osf_statfs64
+osf_subsys_info
+osf_swapctl
 osf_swapon
+osf_syscall
 osf_sysinfo
+osf_table
+osf_uadmin
 osf_usleep_thread
+osf_uswitch
+osf_utc_adjtime
+osf_utc_gettime
 osf_utimes
 osf_utsname
 osf_wait4
+osf_waitid
 pause	1073741858
 pciconfig_iobase
 pciconfig_read
@@ -277,6 +378,7 @@ perf_event_open	1073742122
 perfctr
 perfmonctl
 personality	1073741959
+pidfd_send_signal	1073742248
 pipe	1073741846
 pipe2	1073742117
 pivot_root	1073741979
@@ -285,6 +387,7 @@ pkey_free	1073742155
 pkey_mprotect	1073742153
 poll	1073741831
 ppoll	1073742095
+ppoll_time64
 prctl	1073741981
 pread
 pread64	1073741841
@@ -296,6 +399,7 @@ process_vm_writev	1073742364
 prof
 profil
 pselect6	1073742094
+pselect6_time64
 ptrace	1073742345
 putpmsg	1073742006
 pwrite
@@ -314,6 +418,7 @@ reboot	1073741993
 recv
 recvfrom	1073742341
 recvmmsg	1073742361
+recvmmsg_time64
 recvmsg	1073742343
 remap_file_pages	1073742040
 removexattr	1073742021
@@ -332,6 +437,7 @@ rt_sigqueueinfo	1073742348
 rt_sigreturn	1073742337
 rt_sigsuspend	1073741954
 rt_sigtimedwait	1073742347
+rt_sigtimedwait_time64
 rt_tgsigqueueinfo	1073742360
 rtas
 s390_guarded_storage
@@ -339,6 +445,7 @@ s390_pci_mmio_read
 s390_pci_mmio_write
 s390_runtime_instr
 s390_sthyi
+sched_get_affinity
 sched_get_priority_max	1073741970
 sched_get_priority_min	1073741971
 sched_getaffinity	1073742028
@@ -346,6 +453,8 @@ sched_getattr	1073742139
 sched_getparam	1073741967
 sched_getscheduler	1073741969
 sched_rr_get_interval	1073741972
+sched_rr_get_interval_time64
+sched_set_affinity
 sched_setaffinity	1073742027
 sched_setattr	1073742138
 sched_setparam	1073741966
@@ -358,6 +467,7 @@ semctl	1073741890
 semget	1073741888
 semop	1073741889
 semtimedop	1073742044
+semtimedop_time64
 send
 sendfile	1073741864
 sendfile64
@@ -454,16 +564,21 @@ timer_create	1073742350
 timer_delete	1073742050
 timer_getoverrun	1073742049
 timer_gettime	1073742048
+timer_gettime64
 timer_settime	1073742047
+timer_settime64
 timerfd
 timerfd_create	1073742107
 timerfd_gettime	1073742111
+timerfd_gettime64
 timerfd_settime	1073742110
+timerfd_settime64
 times	1073741924
 tkill	1073742024
 truncate	1073741900
 truncate64
 tuxcall	1073742008
+udftrap
 ugetrlimit
 ulimit
 umask	1073741919
@@ -478,6 +593,7 @@ userfaultfd	1073742147
 ustat	1073741960
 utime	1073741956
 utimensat	1073742104
+utimensat_time64
 utimes	1073742059
 utrap_install
 vfork	1073741882

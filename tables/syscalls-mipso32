@@ -34,10 +34,15 @@ chown	4202
 chown32
 chroot	4061
 clock_adjtime	4341
+clock_adjtime64	4405
 clock_getres	4264
+clock_getres_time64	4406
 clock_gettime	4263
+clock_gettime64	4403
 clock_nanosleep	4265
+clock_nanosleep_time64	4407
 clock_settime	4262
+clock_settime64	4404
 clone	4120
 clone2
 close	4006
@@ -60,6 +65,7 @@ epoll_wait	4250
 epoll_wait_old
 eventfd	4319
 eventfd2	4325
+exec_with_loader
 execv
 execve	4011
 execveat	4356
@@ -86,7 +92,11 @@ flistxattr	4232
 flock	4143
 fork	4002
 fremovexattr	4235
+fsconfig
 fsetxattr	4226
+fsmount
+fsopen
+fspick
 fstat	4108
 fstat64	4215
 fstatat64	4293
@@ -97,6 +107,7 @@ ftime	4035
 ftruncate	4093
 ftruncate64	4212
 futex	4238
+futex_time64	4422
 futimesat	4292
 get_kernel_syms	4130
 get_mempolicy	4269
@@ -156,8 +167,12 @@ io_cancel	4245
 io_destroy	4242
 io_getevents	4243
 io_pgetevents	4368
+io_pgetevents_time64	4416
 io_setup	4241
 io_submit	4244
+io_uring_enter	4426
+io_uring_register	4427
+io_uring_setup	4425
 ioctl	4054
 ioperm	4101
 iopl	4110
@@ -190,6 +205,7 @@ madvise1
 mbind	4268
 membarrier	4358
 memfd_create	4354
+memory_ordering
 migrate_pages	4287
 mincore	4217
 mkdir	4039
@@ -203,6 +219,7 @@ mmap	4090
 mmap2	4210
 modify_ldt	4123
 mount	4021
+move_mount
 move_pages	4308
 mprotect	4125
 mpx	4056
@@ -210,7 +227,9 @@ mq_getsetattr	4276
 mq_notify	4275
 mq_open	4271
 mq_timedreceive	4274
+mq_timedreceive_time64	4419
 mq_timedsend	4273
+mq_timedsend_time64	4418
 mq_unlink	4272
 mremap	4167
 msgctl	4402
@@ -238,37 +257,119 @@ olduname
 oldwait4
 open	4005
 open_by_handle_at	4340
+open_tree
 openat	4288
 or1k_atomic
+osf_adjtime
+osf_afs_syscall
+osf_alt_plock
+osf_alt_setsid
+osf_alt_sigpending
+osf_asynch_daemon
+osf_audcntl
+osf_audgen
+osf_chflags
+osf_execve
+osf_exportfs
+osf_fchflags
+osf_fdatasync
+osf_fpathconf
 osf_fstat
 osf_fstatfs
 osf_fstatfs64
+osf_fuser
+osf_getaddressconf
 osf_getdirentries
 osf_getdomainname
+osf_getfh
+osf_getfsstat
+osf_gethostid
 osf_getitimer
+osf_getlogin
+osf_getmnt
 osf_getrusage
 osf_getsysinfo
 osf_gettimeofday
+osf_kloadcall
+osf_kmodcall
 osf_lstat
+osf_memcntl
+osf_mincore
 osf_mount
+osf_mremap
+osf_msfs_syscall
+osf_msleep
+osf_mvalid
+osf_mwakeup
+osf_naccept
+osf_nfssvc
+osf_ngetpeername
+osf_ngetsockname
+osf_nrecvfrom
+osf_nrecvmsg
+osf_nsendmsg
+osf_ntp_adjtime
+osf_ntp_gettime
+osf_old_creat
+osf_old_fstat
+osf_old_getpgrp
+osf_old_killpg
+osf_old_lstat
+osf_old_open
+osf_old_sigaction
+osf_old_sigblock
+osf_old_sigreturn
+osf_old_sigsetmask
+osf_old_sigvec
+osf_old_stat
+osf_old_vadvise
+osf_old_vtrace
+osf_old_wait
+osf_oldquota
+osf_pathconf
+osf_pid_block
+osf_pid_unblock
+osf_plock
+osf_priocntlset
+osf_profil
 osf_proplist_syscall
+osf_reboot
+osf_revoke
+osf_sbrk
+osf_security
 osf_select
 osf_set_program_attributes
+osf_set_speculative
+osf_sethostid
 osf_setitimer
+osf_setlogin
 osf_setsysinfo
 osf_settimeofday
 osf_shmat
+osf_signal
 osf_sigprocmask
+osf_sigsendset
 osf_sigstack
+osf_sigwaitprim
+osf_sstk
 osf_stat
 osf_statfs
 osf_statfs64
+osf_subsys_info
+osf_swapctl
 osf_swapon
+osf_syscall
 osf_sysinfo
+osf_table
+osf_uadmin
 osf_usleep_thread
+osf_uswitch
+osf_utc_adjtime
+osf_utc_gettime
 osf_utimes
 osf_utsname
 osf_wait4
+osf_waitid
 pause	4029
 pciconfig_iobase
 pciconfig_read
@@ -277,6 +378,7 @@ perf_event_open	4333
 perfctr
 perfmonctl
 personality	4136
+pidfd_send_signal	4424
 pipe	4042
 pipe2	4328
 pivot_root	4216
@@ -285,6 +387,7 @@ pkey_free	4365
 pkey_mprotect	4363
 poll	4188
 ppoll	4302
+ppoll_time64	4414
 prctl	4192
 pread
 pread64	4200
@@ -296,6 +399,7 @@ process_vm_writev	4346
 prof	4044
 profil	4098
 pselect6	4301
+pselect6_time64	4413
 ptrace	4026
 putpmsg	4209
 pwrite
@@ -314,6 +418,7 @@ reboot	4088
 recv	4175
 recvfrom	4176
 recvmmsg	4335
+recvmmsg_time64	4417
 recvmsg	4177
 remap_file_pages	4251
 removexattr	4233
@@ -332,6 +437,7 @@ rt_sigqueueinfo	4198
 rt_sigreturn	4193
 rt_sigsuspend	4199
 rt_sigtimedwait	4197
+rt_sigtimedwait_time64	4421
 rt_tgsigqueueinfo	4332
 rtas
 s390_guarded_storage
@@ -339,6 +445,7 @@ s390_pci_mmio_read
 s390_pci_mmio_write
 s390_runtime_instr
 s390_sthyi
+sched_get_affinity
 sched_get_priority_max	4163
 sched_get_priority_min	4164
 sched_getaffinity	4240
@@ -346,6 +453,8 @@ sched_getattr	4350
 sched_getparam	4159
 sched_getscheduler	4161
 sched_rr_get_interval	4165
+sched_rr_get_interval_time64	4423
+sched_set_affinity
 sched_setaffinity	4239
 sched_setattr	4349
 sched_setparam	4158
@@ -358,6 +467,7 @@ semctl	4394
 semget	4393
 semop
 semtimedop
+semtimedop_time64	4420
 send	4178
 sendfile	4207
 sendfile64	4237
@@ -454,16 +564,21 @@ timer_create	4257
 timer_delete	4261
 timer_getoverrun	4260
 timer_gettime	4259
+timer_gettime64	4408
 timer_settime	4258
+timer_settime64	4409
 timerfd	4318
 timerfd_create	4321
 timerfd_gettime	4322
+timerfd_gettime64	4410
 timerfd_settime	4323
+timerfd_settime64	4411
 times	4043
 tkill	4236
 truncate	4092
 truncate64	4211
 tuxcall
+udftrap
 ugetrlimit
 ulimit	4058
 umask	4060
@@ -478,6 +593,7 @@ userfaultfd	4357
 ustat	4062
 utime	4030
 utimensat	4316
+utimensat_time64	4412
 utimes	4267
 utrap_install
 vfork

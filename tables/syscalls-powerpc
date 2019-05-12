@@ -34,10 +34,15 @@ chown	181
 chown32
 chroot	61
 clock_adjtime	347
+clock_adjtime64	405
 clock_getres	247
+clock_getres_time64	406
 clock_gettime	246
+clock_gettime64	403
 clock_nanosleep	248
+clock_nanosleep_time64	407
 clock_settime	245
+clock_settime64	404
 clone	120
 clone2
 close	6
@@ -60,6 +65,7 @@ epoll_wait	238
 epoll_wait_old
 eventfd	307
 eventfd2	314
+exec_with_loader
 execv
 execve	11
 execveat	362
@@ -86,7 +92,11 @@ flistxattr	217
 flock	143
 fork	2
 fremovexattr	220
+fsconfig
 fsetxattr	211
+fsmount
+fsopen
+fspick
 fstat	108
 fstat64	197
 fstatat64	291
@@ -97,6 +107,7 @@ ftime	35
 ftruncate	93
 ftruncate64	194
 futex	221
+futex_time64	422
 futimesat	290
 get_kernel_syms	130
 get_mempolicy	260
@@ -156,8 +167,12 @@ io_cancel	231
 io_destroy	228
 io_getevents	229
 io_pgetevents	388
+io_pgetevents_time64	416
 io_setup	227
 io_submit	230
+io_uring_enter	426
+io_uring_register	427
+io_uring_setup	425
 ioctl	54
 ioperm	101
 iopl	110
@@ -190,6 +205,7 @@ madvise1
 mbind	259
 membarrier	365
 memfd_create	360
+memory_ordering
 migrate_pages	258
 mincore	206
 mkdir	39
@@ -203,6 +219,7 @@ mmap	90
 mmap2	192
 modify_ldt	123
 mount	21
+move_mount
 move_pages	301
 mprotect	125
 mpx	56
@@ -210,7 +227,9 @@ mq_getsetattr	267
 mq_notify	266
 mq_open	262
 mq_timedreceive	265
+mq_timedreceive_time64	419
 mq_timedsend	264
+mq_timedsend_time64	418
 mq_unlink	263
 mremap	163
 msgctl	402
@@ -238,37 +257,119 @@ olduname	109
 oldwait4
 open	5
 open_by_handle_at	346
+open_tree
 openat	286
 or1k_atomic
+osf_adjtime
+osf_afs_syscall
+osf_alt_plock
+osf_alt_setsid
+osf_alt_sigpending
+osf_asynch_daemon
+osf_audcntl
+osf_audgen
+osf_chflags
+osf_execve
+osf_exportfs
+osf_fchflags
+osf_fdatasync
+osf_fpathconf
 osf_fstat
 osf_fstatfs
 osf_fstatfs64
+osf_fuser
+osf_getaddressconf
 osf_getdirentries
 osf_getdomainname
+osf_getfh
+osf_getfsstat
+osf_gethostid
 osf_getitimer
+osf_getlogin
+osf_getmnt
 osf_getrusage
 osf_getsysinfo
 osf_gettimeofday
+osf_kloadcall
+osf_kmodcall
 osf_lstat
+osf_memcntl
+osf_mincore
 osf_mount
+osf_mremap
+osf_msfs_syscall
+osf_msleep
+osf_mvalid
+osf_mwakeup
+osf_naccept
+osf_nfssvc
+osf_ngetpeername
+osf_ngetsockname
+osf_nrecvfrom
+osf_nrecvmsg
+osf_nsendmsg
+osf_ntp_adjtime
+osf_ntp_gettime
+osf_old_creat
+osf_old_fstat
+osf_old_getpgrp
+osf_old_killpg
+osf_old_lstat
+osf_old_open
+osf_old_sigaction
+osf_old_sigblock
+osf_old_sigreturn
+osf_old_sigsetmask
+osf_old_sigvec
+osf_old_stat
+osf_old_vadvise
+osf_old_vtrace
+osf_old_wait
+osf_oldquota
+osf_pathconf
+osf_pid_block
+osf_pid_unblock
+osf_plock
+osf_priocntlset
+osf_profil
 osf_proplist_syscall
+osf_reboot
+osf_revoke
+osf_sbrk
+osf_security
 osf_select
 osf_set_program_attributes
+osf_set_speculative
+osf_sethostid
 osf_setitimer
+osf_setlogin
 osf_setsysinfo
 osf_settimeofday
 osf_shmat
+osf_signal
 osf_sigprocmask
+osf_sigsendset
 osf_sigstack
+osf_sigwaitprim
+osf_sstk
 osf_stat
 osf_statfs
 osf_statfs64
+osf_subsys_info
+osf_swapctl
 osf_swapon
+osf_syscall
 osf_sysinfo
+osf_table
+osf_uadmin
 osf_usleep_thread
+osf_uswitch
+osf_utc_adjtime
+osf_utc_gettime
 osf_utimes
 osf_utsname
 osf_wait4
+osf_waitid
 pause	29
 pciconfig_iobase	200
 pciconfig_read	198
@@ -277,6 +378,7 @@ perf_event_open	319
 perfctr
 perfmonctl
 personality	136
+pidfd_send_signal	424
 pipe	42
 pipe2	317
 pivot_root	203
@@ -285,6 +387,7 @@ pkey_free	385
 pkey_mprotect	386
 poll	167
 ppoll	281
+ppoll_time64	414
 prctl	171
 pread
 pread64	179
@@ -296,6 +399,7 @@ process_vm_writev	352
 prof	44
 profil	98
 pselect6	280
+pselect6_time64	413
 ptrace	26
 putpmsg	188
 pwrite
@@ -314,6 +418,7 @@ reboot	88
 recv	336
 recvfrom	337
 recvmmsg	343
+recvmmsg_time64	417
 recvmsg	342
 remap_file_pages	239
 removexattr	218
@@ -332,6 +437,7 @@ rt_sigqueueinfo	177
 rt_sigreturn	172
 rt_sigsuspend	178
 rt_sigtimedwait	176
+rt_sigtimedwait_time64	421
 rt_tgsigqueueinfo	322
 rtas	255
 s390_guarded_storage
@@ -339,6 +445,7 @@ s390_pci_mmio_read
 s390_pci_mmio_write
 s390_runtime_instr
 s390_sthyi
+sched_get_affinity
 sched_get_priority_max	159
 sched_get_priority_min	160
 sched_getaffinity	223
@@ -346,6 +453,8 @@ sched_getattr	356
 sched_getparam	155
 sched_getscheduler	157
 sched_rr_get_interval	161
+sched_rr_get_interval_time64	423
+sched_set_affinity
 sched_setaffinity	222
 sched_setattr	355
 sched_setparam	154
@@ -358,6 +467,7 @@ semctl	394
 semget	393
 semop
 semtimedop
+semtimedop_time64	420
 send	334
 sendfile	186
 sendfile64	226
@@ -454,16 +564,21 @@ timer_create	240
 timer_delete	244
 timer_getoverrun	243
 timer_gettime	242
+timer_gettime64	408
 timer_settime	241
+timer_settime64	409
 timerfd
 timerfd_create	306
 timerfd_gettime	312
+timerfd_gettime64	410
 timerfd_settime	311
+timerfd_settime64	411
 times	43
 tkill	208
 truncate	92
 truncate64	193
 tuxcall	225
+udftrap
 ugetrlimit	190
 ulimit	58
 umask	60
@@ -478,6 +593,7 @@ userfaultfd	364
 ustat	62
 utime	30
 utimensat	304
+utimensat_time64	412
 utimes	251
 utrap_install
 vfork	189
