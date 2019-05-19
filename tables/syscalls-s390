@@ -92,11 +92,11 @@ flistxattr	232
 flock	143
 fork	2
 fremovexattr	235
-fsconfig
+fsconfig	431
 fsetxattr	226
-fsmount
-fsopen
-fspick
+fsmount	432
+fsopen	430
+fspick	433
 fstat	108
 fstat64	197
 fstatat64	293
@@ -219,7 +219,7 @@ mmap	90
 mmap2	192
 modify_ldt
 mount	21
-move_mount
+move_mount	429
 move_pages	310
 mprotect	125
 mpx
@@ -257,7 +257,7 @@ olduname
 oldwait4
 open	5
 open_by_handle_at	336
-open_tree
+open_tree	428
 openat	288
 or1k_atomic
 osf_adjtime
