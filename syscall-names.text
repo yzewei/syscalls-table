@@ -45,6 +45,7 @@ clock_settime
 clock_settime64
 clone
 clone2
+clone3
 close
 connect
 copy_file_range
@@ -91,6 +92,7 @@ finit_module
 flistxattr
 flock
 fork
+fp_udfiex_crtl
 fremovexattr
 fsconfig
 fsetxattr
@@ -378,6 +380,7 @@ perf_event_open
 perfctr
 perfmonctl
 personality
+pidfd_open
 pidfd_send_signal
 pipe
 pipe2
