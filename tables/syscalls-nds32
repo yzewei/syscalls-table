@@ -578,7 +578,7 @@ tkill	130
 truncate
 truncate64	45
 tuxcall
-udftrap	245
+udftrap
 ugetrlimit
 ulimit
 umask	166
