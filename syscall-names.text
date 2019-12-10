@@ -250,6 +250,7 @@ nfsservctl
 ni_syscall
 nice
 old_adjtimex
+old_getpagesize
 oldfstat
 oldlstat
 oldolduname
@@ -555,6 +556,7 @@ sync_file_range
 sync_file_range2
 syncfs
 sys_debug_setcontext
+syscall
 sysfs
 sysinfo
 syslog
@@ -598,6 +600,7 @@ utime
 utimensat
 utimensat_time64
 utimes
+utimesat
 utrap_install
 vfork
 vhangup
