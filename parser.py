@@ -1,12 +1,13 @@
-#!/bin/python
+#!/usr/bin/python3
 
 import collections
 import csv
-import datetime
+from datetime import datetime
 import io
 import os
 import sys
 
+from string import Template
 
 kernel_version = ''
 
@@ -52,140 +53,12 @@ for arch in sorted(present_archs):
 for arch in removed_archs:
     archs.append(arch)
 
-print("""
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>System calls table for several architectures</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.0/css/select.dataTables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/datatables.mark.js/2.0.0/datatables.mark.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/plug-ins/1.10.13/features/mark.js/datatables.mark.min.css"/>
-
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js)"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.13/features/mark.js/datatables.mark.js"></script>
-    <script type="text/javascript" id="js">
-            $(document).ready(function() {
-                    $("table").DataTable( {
-                            pageLength  : -1,
-                            fixedHeader : true,
-                            mark        : true,
-                            dom         : 'Bft',
-                            buttons     : [
-                            {
-                                    extend : 'colvis',
-                                    text: 'disable architectures',
-                                    columns: ':gt(0)'
-                            }
-                            ]
-                    });
-    });
-    </script>
-    <style type="text/css">
-
-table.syscalls {
-        border: 1px solid #000;
-}
-
-table.syscalls th {
-        text-align: center;
-        padding: 0.5em;
-        line-height: 2em;
-        color: white;
-}
-
-table.syscalls thead {
-        border: 1px solid black;
-        background-color: grey;
-}
-
-table.syscalls td {
-        padding: 0.5em;
-}
-
-table.syscalls tbody tr.odd td {
-        background-color: lightgrey;
-}
-
-.legacy, table.syscalls tbody tr.odd td.legacy {
-        background-color: lightpink;
-}
-    </style>
-</head>
-<body>
-
-<h1>Introduction</h1>
-    <p>
-    Linux provides many system calls for userspace. But numbers used for them
-    differ between architectures. This page was created to help developers find
-    those values.
-    </p>
-    <p>
-    But there is another issue. Some of system calls got dropped during Linux
-    development, some got replaced by newer ones. Several architectures got
-    added into kernel later and their maintainers decided to not bother with
-    supporting obsoleted system calls. They are marked with "-1" value in table
-    below.
-    </p>
-<h1>How to use</h1>
-    <p>There are few features you can use:</p>
-
-    <ul>
-    <li>search field allows to filter table by syscall name or number</li>
-    <li>system call names link to their man pages</li>
-    <li>'disable architectures' button allows to disable not needed columns</li>
-    <li>clicking on header entries sorts table</li>
-    </ul>
-
-<h1>Some notes</h1>
-
-    <ul>
-    <li>Table is updated at random moments - usually somewhere after rc1 kernel release</li>
-    <li>Avr32, blackfin, cris, frv, m32r, metag, mn10300, score, tile architectures got dropped from Linux kernel - old data used.</li>
-    <li>RISC-V got split into 32- and 64-bit
-    </ul>
-
-<h1>How to help</h1>
-    <p>
-    Sources used to generate table are available in <a
-    href="https://github.com/hrw/syscalls-table">git repository at github</a>.
-    Patches are always welcomed.
-    </p>
-""")
-
-print("""
-<h1>Build info</h1>
-    <p>Table generated on <strong>%s</strong> using data from <strong>%s</strong> kernel source.</p>
-""" % (datetime.datetime.strftime(datetime.datetime.utcnow(),
-                                  "%Y.%m.%d %H:%M"), kernel_version))
-
-print("""
-    <table class="syscalls">
-        <thead>
-            <tr>
-                <th>system call</th>
-""")
+archs_header = ''
 
 for arch in archs:
-    print("<th>%s</th>" % arch)
+    archs_header += f'<th>{arch}</th>'
 
-
-print("""
-            </tr>
-        </thead>
-        <tbody>
-""")
-
+syscall_table = ''
 oddeven = 0
 
 for syscall in sorted(syscalls.keys()):
@@ -197,7 +70,10 @@ for syscall in sorted(syscalls.keys()):
 
     oddeven += 1
 
-    print("<tr class='%s'><td><a href='http://www.man7.org/linux/man-pages/man2/%s.2.html'>%s</a></td>" % (trclass, syscall, syscall))
+    syscall_table += f"""
+<tr class='{trclass}'>
+<td><a href='http://www.man7.org/linux/man-pages/man2/{syscall}.2.html'>
+{syscall}</a></td>"""
 
     for arch in archs:
 
@@ -212,13 +88,15 @@ for syscall in sorted(syscalls.keys()):
             syscallnr = -1
             css = ' class="legacy" '
 
-        print("<td%s>%s</td>" % (css, syscallnr))
+        syscall_table += f"<td {css}>{syscallnr}</td>"
 
-    print("</tr>")
+    syscall_table += "</tr>"
 
-print("""
-        </tbody>
-    </table>
-</body>
-</html>
-""")
+with open("../template.html") as html_file:
+    html = Template(html_file.read())
+
+    print(html.substitute(generate_time=datetime.strftime(datetime.utcnow(),
+                                                          "%Y.%m.%d %H:%M"),
+                          kernel_version=kernel_version,
+                          archs_header=archs_header,
+                          syscall_table=syscall_table))
