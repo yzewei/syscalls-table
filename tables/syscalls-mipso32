@@ -45,6 +45,7 @@ clock_settime	4262
 clock_settime64	4404
 clone	4120
 clone2
+clone3	4435
 close	4006
 connect	4170
 copy_file_range	4360
@@ -91,6 +92,7 @@ finit_module	4348
 flistxattr	4232
 flock	4143
 fork	4002
+fp_udfiex_crtl
 fremovexattr	4235
 fsconfig	4431
 fsetxattr	4226
@@ -248,6 +250,7 @@ nfsservctl	4189
 ni_syscall
 nice	4034
 old_adjtimex
+old_getpagesize
 oldfstat
 oldlstat
 oldolduname
@@ -378,6 +381,7 @@ perf_event_open	4333
 perfctr
 perfmonctl
 personality	4136
+pidfd_open	4434
 pidfd_send_signal	4424
 pipe	4042
 pipe2	4328
@@ -552,6 +556,7 @@ sync_file_range	4305
 sync_file_range2
 syncfs	4342
 sys_debug_setcontext
+syscall	4000
 sysfs	4135
 sysinfo	4116
 syslog	4103
@@ -595,6 +600,7 @@ utime	4030
 utimensat	4316
 utimensat_time64	4412
 utimes	4267
+utimesat
 utrap_install
 vfork
 vhangup	4111

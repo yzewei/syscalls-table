@@ -45,6 +45,7 @@ clock_settime	1073742051
 clock_settime64
 clone	1073741880
 clone2
+clone3	1073742259
 close	1073741827
 connect	1073741866
 copy_file_range	1073742150
@@ -91,6 +92,7 @@ finit_module	1073742137
 flistxattr	1073742020
 flock	1073741897
 fork	1073741881
+fp_udfiex_crtl
 fremovexattr	1073742023
 fsconfig	1073742255
 fsetxattr	1073742014
@@ -248,6 +250,7 @@ nfsservctl
 ni_syscall
 nice
 old_adjtimex
+old_getpagesize
 oldfstat
 oldlstat
 oldolduname
@@ -378,6 +381,7 @@ perf_event_open	1073742122
 perfctr
 perfmonctl
 personality	1073741959
+pidfd_open	1073742258
 pidfd_send_signal	1073742248
 pipe	1073741846
 pipe2	1073742117
@@ -552,6 +556,7 @@ sync_file_range	1073742101
 sync_file_range2
 syncfs	1073742130
 sys_debug_setcontext
+syscall
 sysfs	1073741963
 sysinfo	1073741923
 syslog	1073741927
@@ -595,6 +600,7 @@ utime	1073741956
 utimensat	1073742104
 utimensat_time64
 utimes	1073742059
+utimesat
 utrap_install
 vfork	1073741882
 vhangup	1073741977
