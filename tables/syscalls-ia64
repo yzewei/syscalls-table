@@ -262,6 +262,7 @@ open	1028
 open_by_handle_at	1327
 open_tree	1452
 openat	1281
+openat2	1461
 or1k_atomic
 osf_adjtime
 osf_afs_syscall
@@ -381,6 +382,7 @@ perf_event_open	1352
 perfctr
 perfmonctl	1175
 personality	1140
+pidfd_getfd	1462
 pidfd_open	1458
 pidfd_send_signal	1448
 pipe	1058

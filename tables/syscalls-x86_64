@@ -262,6 +262,7 @@ open	2
 open_by_handle_at	304
 open_tree	428
 openat	257
+openat2	437
 or1k_atomic
 osf_adjtime
 osf_afs_syscall
@@ -381,6 +382,7 @@ perf_event_open	298
 perfctr
 perfmonctl
 personality	135
+pidfd_getfd	438
 pidfd_open	434
 pidfd_send_signal	424
 pipe	22

@@ -262,6 +262,7 @@ open	1073741826
 open_by_handle_at	1073742128
 open_tree	1073742252
 openat	1073742081
+openat2	1073742261
 or1k_atomic
 osf_adjtime
 osf_afs_syscall
@@ -381,6 +382,7 @@ perf_event_open	1073742122
 perfctr
 perfmonctl
 personality	1073741959
+pidfd_getfd	1073742262
 pidfd_open	1073742258
 pidfd_send_signal	1073742248
 pipe	1073741846

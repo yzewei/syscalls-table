@@ -262,6 +262,7 @@ open	4005
 open_by_handle_at	4340
 open_tree	4428
 openat	4288
+openat2	4437
 or1k_atomic
 osf_adjtime
 osf_afs_syscall
@@ -381,6 +382,7 @@ perf_event_open	4333
 perfctr
 perfmonctl
 personality	4136
+pidfd_getfd	4438
 pidfd_open	4434
 pidfd_send_signal	4424
 pipe	4042

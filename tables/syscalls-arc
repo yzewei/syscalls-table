@@ -45,7 +45,7 @@ clock_settime	112
 clock_settime64	404
 clone	220
 clone2
-clone3
+clone3	435
 close	57
 connect	203
 copy_file_range	285
@@ -262,6 +262,7 @@ open
 open_by_handle_at	265
 open_tree	428
 openat	56
+openat2	437
 or1k_atomic
 osf_adjtime
 osf_afs_syscall
@@ -381,6 +382,7 @@ perf_event_open	241
 perfctr
 perfmonctl
 personality	92
+pidfd_getfd	438
 pidfd_open	434
 pidfd_send_signal	424
 pipe

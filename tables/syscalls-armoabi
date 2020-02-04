@@ -262,6 +262,7 @@ open	9437189
 open_by_handle_at	9437555
 open_tree	9437612
 openat	9437506
+openat2	9437621
 or1k_atomic
 osf_adjtime
 osf_afs_syscall
@@ -381,6 +382,7 @@ perf_event_open	9437548
 perfctr
 perfmonctl
 personality	9437320
+pidfd_getfd	9437622
 pidfd_open	9437618
 pidfd_send_signal	9437608
 pipe	9437226
