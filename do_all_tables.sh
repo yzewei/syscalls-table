@@ -81,6 +81,7 @@ do
 		;;
 	sh)
 									generate_table
+		arch=sh64	extraflags=-D__SH5__			generate_table
 		;;
 	*)
 		generate_table
