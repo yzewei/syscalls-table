@@ -43,7 +43,7 @@ archs = ['arm64', 'arm', 'armoabi', 'x86_64', 'x32', 'i386', 'mips64',
          'mips64n32', 'mipso32', 'powerpc64', 'powerpc', 's390x', 's390']
 
 removed_archs = ['avr32', 'blackfin', 'cris', 'frv', 'm32r', 'metag',
-                 'mn10300', 'score', 'tile', 'tile64']
+                 'mn10300', 'score', 'sh64', 'tile', 'tile64']
 
 for arch in sorted(present_archs):
 
