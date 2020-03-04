@@ -45,7 +45,7 @@ clock_settime	112
 clock_settime64	404
 clone	220
 clone2
-clone3
+clone3	435
 close	57
 connect	203
 copy_file_range	285
@@ -100,8 +100,8 @@ fsmount	432
 fsopen	430
 fspick	433
 fstat
-fstat64
-fstatat64
+fstat64	80
+fstatat64	79
 fstatfs
 fstatfs64	44
 fsync	82
