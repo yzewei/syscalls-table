@@ -7,7 +7,6 @@ access	1073741845
 acct	1073741987
 add_key	1073742072
 adjtimex	1073741983
-afs_syscall	1073742007
 alarm	1073741861
 arc_gettls
 arc_settls
@@ -21,7 +20,6 @@ bdflush
 bfin_spinlock
 bind	1073741873
 bpf	1073742145
-break
 brk	1073741836
 cache_sync
 cachectl
@@ -104,7 +102,6 @@ fstatat64
 fstatfs	1073741962
 fstatfs64
 fsync	1073741898
-ftime
 ftruncate	1073741901
 ftruncate64
 futex	1073742026
@@ -157,7 +154,6 @@ getxattr	1073742015
 getxgid
 getxpid
 getxuid
-gtty
 idle
 init_module	1073741999
 inotify_add_watch	1073742078
@@ -194,7 +190,6 @@ linkat	1073742089
 listen	1073741874
 listxattr	1073742018
 llistxattr	1073742019
-lock
 lookup_dcookie	1073742036
 lremovexattr	1073742022
 lseek	1073741832
@@ -222,7 +217,6 @@ mount	1073741989
 move_mount	1073742253
 move_pages	1073742357
 mprotect	1073741834
-mpx
 mq_getsetattr	1073742069
 mq_notify	1073742351
 mq_open	1073742064
@@ -398,12 +392,9 @@ preadv2	1073742370
 prlimit64	1073742126
 process_vm_readv	1073742363
 process_vm_writev	1073742364
-prof
-profil
 pselect6	1073742094
 pselect6_time64
 ptrace	1073742345
-putpmsg	1073742006
 pwrite64	1073741842
 pwritev	1073742359
 pwritev2	1073742371
@@ -462,7 +453,6 @@ sched_setparam	1073741966
 sched_setscheduler	1073741968
 sched_yield	1073741848
 seccomp	1073742141
-security	1073742009
 select	1073741847
 semctl	1073741890
 semget	1073741888
@@ -538,7 +528,6 @@ statfs	1073741961
 statfs64
 statx	1073742156
 stime
-stty
 subpage_prot
 swapcontext
 swapoff	1073741992
@@ -576,10 +565,8 @@ times	1073741924
 tkill	1073742024
 truncate	1073741900
 truncate64
-tuxcall	1073742008
 udftrap
 ugetrlimit
-ulimit
 umask	1073741919
 umount
 umount2	1073741990
@@ -601,7 +588,6 @@ vhangup	1073741977
 vm86
 vm86old
 vmsplice	1073742356
-vserver
 wait4	1073741885
 waitid	1073742353
 waitpid

@@ -7,7 +7,6 @@ access	5020
 acct	5158
 add_key	5239
 adjtimex	5154
-afs_syscall	5176
 alarm	5037
 arc_gettls
 arc_settls
@@ -21,7 +20,6 @@ bdflush
 bfin_spinlock
 bind	5048
 bpf	5315
-break
 brk	5012
 cache_sync
 cachectl	5198
@@ -104,7 +102,6 @@ fstatat64
 fstatfs	5135
 fstatfs64
 fsync	5072
-ftime
 ftruncate	5075
 ftruncate64
 futex	5194
@@ -157,7 +154,6 @@ getxattr	5183
 getxgid
 getxpid
 getxuid
-gtty
 idle
 init_module	5168
 inotify_add_watch	5244
@@ -194,7 +190,6 @@ linkat	5255
 listen	5049
 listxattr	5186
 llistxattr	5187
-lock
 lookup_dcookie	5206
 lremovexattr	5190
 lseek	5008
@@ -222,7 +217,6 @@ mount	5160
 move_mount	5429
 move_pages	5267
 mprotect	5010
-mpx
 mq_getsetattr	5235
 mq_notify	5234
 mq_open	5230
@@ -398,12 +392,9 @@ preadv2	5321
 prlimit64	5297
 process_vm_readv	5304
 process_vm_writev	5305
-prof
-profil
 pselect6	5260
 pselect6_time64
 ptrace	5099
-putpmsg	5175
 pwrite64	5017
 pwritev	5290
 pwritev2	5322
@@ -462,7 +453,6 @@ sched_setparam	5139
 sched_setscheduler	5141
 sched_yield	5023
 seccomp	5312
-security
 select
 semctl	5064
 semget	5062
@@ -538,7 +528,6 @@ statfs	5134
 statfs64
 statx	5326
 stime
-stty
 subpage_prot
 swapcontext
 swapoff	5163
@@ -576,10 +565,8 @@ times	5098
 tkill	5192
 truncate	5074
 truncate64
-tuxcall
 udftrap
 ugetrlimit
-ulimit
 umask	5093
 umount
 umount2	5161
@@ -601,7 +588,6 @@ vhangup	5150
 vm86
 vm86old
 vmsplice	5266
-vserver	5236
 wait4	5059
 waitid	5237
 waitpid

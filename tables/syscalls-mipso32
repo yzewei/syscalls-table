@@ -7,7 +7,6 @@ access	4033
 acct	4051
 add_key	4280
 adjtimex	4124
-afs_syscall	4137
 alarm	4027
 arc_gettls
 arc_settls
@@ -21,7 +20,6 @@ bdflush	4134
 bfin_spinlock
 bind	4169
 bpf	4355
-break	4017
 brk	4045
 cache_sync
 cachectl	4148
@@ -104,7 +102,6 @@ fstatat64	4293
 fstatfs	4100
 fstatfs64	4256
 fsync	4118
-ftime	4035
 ftruncate	4093
 ftruncate64	4212
 futex	4238
@@ -157,7 +154,6 @@ getxattr	4227
 getxgid
 getxpid
 getxuid
-gtty	4032
 idle	4112
 init_module	4128
 inotify_add_watch	4285
@@ -194,7 +190,6 @@ linkat	4296
 listen	4174
 listxattr	4230
 llistxattr	4231
-lock	4053
 lookup_dcookie	4247
 lremovexattr	4234
 lseek	4019
@@ -222,7 +217,6 @@ mount	4021
 move_mount	4429
 move_pages	4308
 mprotect	4125
-mpx	4056
 mq_getsetattr	4276
 mq_notify	4275
 mq_open	4271
@@ -398,12 +392,9 @@ preadv2	4361
 prlimit64	4338
 process_vm_readv	4345
 process_vm_writev	4346
-prof	4044
-profil	4098
 pselect6	4301
 pselect6_time64	4413
 ptrace	4026
-putpmsg	4209
 pwrite64	4201
 pwritev	4331
 pwritev2	4362
@@ -462,7 +453,6 @@ sched_setparam	4158
 sched_setscheduler	4160
 sched_yield	4162
 seccomp	4352
-security
 select
 semctl	4394
 semget	4393
@@ -538,7 +528,6 @@ statfs	4099
 statfs64	4255
 statx	4366
 stime	4025
-stty	4031
 subpage_prot
 swapcontext
 swapoff	4115
@@ -576,10 +565,8 @@ times	4043
 tkill	4236
 truncate	4092
 truncate64	4211
-tuxcall
 udftrap
 ugetrlimit
-ulimit	4058
 umask	4060
 umount	4022
 umount2	4052
@@ -601,7 +588,6 @@ vhangup	4111
 vm86	4113
 vm86old
 vmsplice	4307
-vserver	4277
 wait4	4114
 waitid	4278
 waitpid	4007
