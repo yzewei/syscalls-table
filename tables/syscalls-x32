@@ -395,7 +395,6 @@ poll	1073741831
 ppoll	1073742095
 ppoll_time64
 prctl	1073741981
-pread
 pread64	1073741841
 preadv	1073742358
 preadv2	1073742370
@@ -408,7 +407,6 @@ pselect6	1073742094
 pselect6_time64
 ptrace	1073742345
 putpmsg	1073742006
-pwrite
 pwrite64	1073741842
 pwritev	1073742359
 pwritev2	1073742371
@@ -536,8 +534,6 @@ socketpair	1073741877
 splice	1073742099
 spu_create
 spu_run
-sram_alloc
-sram_free
 ssetmask
 stat	1073741828
 stat64

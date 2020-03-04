@@ -395,7 +395,6 @@ poll	16
 ppoll	273
 ppoll_time64	414
 prctl	130
-pread
 pread64	30
 preadv	317
 preadv2	346
@@ -408,7 +407,6 @@ pselect6	272
 pselect6_time64	413
 ptrace	160
 putpmsg
-pwrite
 pwrite64	31
 pwritev	318
 pwritev2	347
@@ -536,8 +534,6 @@ socketpair	112
 splice	268
 spu_create
 spu_run
-sram_alloc
-sram_free
 ssetmask
 stat	46
 stat64	47

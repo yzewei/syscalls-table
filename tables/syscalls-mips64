@@ -395,7 +395,6 @@ poll	5007
 ppoll	5261
 ppoll_time64
 prctl	5153
-pread
 pread64	5016
 preadv	5289
 preadv2	5321
@@ -408,7 +407,6 @@ pselect6	5260
 pselect6_time64
 ptrace	5099
 putpmsg	5175
-pwrite
 pwrite64	5017
 pwritev	5290
 pwritev2	5322
@@ -536,8 +534,6 @@ socketpair	5052
 splice	5263
 spu_create
 spu_run
-sram_alloc
-sram_free
 ssetmask
 stat	5004
 stat64
