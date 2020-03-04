@@ -16,6 +16,13 @@ if len(sys.argv) > 1:
 
 syscalls = collections.OrderedDict()
 
+# use current system call names - tables/* can contain archive data
+with io.open('syscall-names.text', newline='') as csvh:
+    syscalldata = csv.reader(csvh, delimiter="\t")
+
+    for row in syscalldata:
+        syscalls[row[0]] = collections.OrderedDict()
+
 present_archs = []
 os.chdir('tables')
 for filename in os.listdir(os.getcwd()):
@@ -31,8 +38,8 @@ for filename in os.listdir(os.getcwd()):
                 try:
                     syscalls[row[0]][arch] = row[1]
                 except KeyError:
-                    syscalls[row[0]] = collections.OrderedDict()
-                    syscalls[row[0]][arch] = row[1]
+                    # old kernel table data - we ignore this syscall
+                    pass
                 except IndexError:
                     pass
 
