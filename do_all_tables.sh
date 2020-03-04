@@ -6,7 +6,8 @@ TMP=`mktemp`
 
 export_headers()
 {
-	make -s -C ${KERNELSRC} ARCH=${arch} O=${PWD}/headers headers_install
+	make -s -C ${KERNELSRC} ARCH=${arch} O=${PWD}/headers headers_install &>/dev/null
+
 
 	egrep -h "^#define __NR_" ${PWD}/headers/usr/include/asm/unistd*.h ${PWD}/headers/usr/include/asm-generic/unistd.h |
 		egrep -v "(unistd.h|NR3264|__NR_syscall|__SC_COMP|__NR_.*Linux|__NR_FAST)" |
