@@ -53,7 +53,6 @@ creat	6083
 create_module	6167
 delete_module	6169
 dipc
-dma_memcpy
 dup	6031
 dup2	6032
 dup3	6290
@@ -203,7 +202,6 @@ lsetxattr	6181
 lstat	6006
 lstat64
 madvise	6027
-madvise1
 mbind	6231
 membarrier	6322
 memfd_create	6318
@@ -257,7 +255,6 @@ oldolduname
 oldstat
 oldumount
 olduname
-oldwait4
 open	6002
 open_by_handle_at	6304
 open_tree	6428
@@ -559,7 +556,6 @@ sysfs	6136
 sysinfo	6097
 syslog	6101
 sysmips	6199
-tas
 tee	6269
 tgkill	6229
 time

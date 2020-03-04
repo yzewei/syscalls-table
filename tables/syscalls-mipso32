@@ -53,7 +53,6 @@ creat	4008
 create_module	4127
 delete_module	4129
 dipc
-dma_memcpy
 dup	4041
 dup2	4063
 dup3	4327
@@ -203,7 +202,6 @@ lsetxattr	4225
 lstat	4107
 lstat64	4214
 madvise	4218
-madvise1
 mbind	4268
 membarrier	4358
 memfd_create	4354
@@ -257,7 +255,6 @@ oldolduname
 oldstat
 oldumount
 olduname
-oldwait4
 open	4005
 open_by_handle_at	4340
 open_tree	4428
@@ -559,7 +556,6 @@ sysfs	4135
 sysinfo	4116
 syslog	4103
 sysmips	4149
-tas
 tee	4306
 tgkill	4266
 time	4013

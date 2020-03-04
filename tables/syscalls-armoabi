@@ -53,7 +53,6 @@ creat	9437192
 create_module
 delete_module	9437313
 dipc
-dma_memcpy
 dup	9437225
 dup2	9437247
 dup3	9437542
@@ -203,7 +202,6 @@ lsetxattr	9437411
 lstat	9437291
 lstat64	9437380
 madvise	9437404
-madvise1
 mbind	9437503
 membarrier	9437573
 memfd_create	9437569
@@ -257,7 +255,6 @@ oldolduname
 oldstat
 oldumount
 olduname
-oldwait4
 open	9437189
 open_by_handle_at	9437555
 open_tree	9437612
@@ -559,7 +556,6 @@ sysfs	9437319
 sysinfo	9437300
 syslog	9437287
 sysmips
-tas
 tee	9437526
 tgkill	9437452
 time	9437197

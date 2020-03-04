@@ -53,7 +53,6 @@ creat
 create_module
 delete_module
 dipc
-dma_memcpy
 dup
 dup2
 dup3
@@ -203,7 +202,6 @@ lsetxattr
 lstat
 lstat64
 madvise
-madvise1
 mbind
 membarrier
 memfd_create
@@ -559,7 +557,6 @@ sysfs
 sysinfo
 syslog
 sysmips
-tas
 tee
 tgkill
 time

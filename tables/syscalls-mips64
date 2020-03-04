@@ -53,7 +53,6 @@ creat	5083
 create_module	5167
 delete_module	5169
 dipc
-dma_memcpy
 dup	5031
 dup2	5032
 dup3	5286
@@ -203,7 +202,6 @@ lsetxattr	5181
 lstat	5006
 lstat64
 madvise	5027
-madvise1
 mbind	5227
 membarrier	5318
 memfd_create	5314
@@ -257,7 +255,6 @@ oldolduname
 oldstat
 oldumount
 olduname
-oldwait4
 open	5002
 open_by_handle_at	5299
 open_tree	5428
@@ -559,7 +556,6 @@ sysfs	5136
 sysinfo	5097
 syslog	5101
 sysmips	5199
-tas
 tee	5265
 tgkill	5225
 time

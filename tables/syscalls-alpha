@@ -53,7 +53,6 @@ creat
 create_module	306
 delete_module	308
 dipc	373
-dma_memcpy
 dup	41
 dup2	90
 dup3	487
@@ -203,7 +202,6 @@ lsetxattr	383
 lstat	68
 lstat64	426
 madvise	75
-madvise1
 mbind	429
 membarrier	517
 memfd_create	512
@@ -257,7 +255,6 @@ oldolduname
 oldstat
 oldumount	321
 olduname
-oldwait4
 open	45
 open_by_handle_at	498
 open_tree	538
@@ -559,7 +556,6 @@ sysfs	254
 sysinfo	318
 syslog	310
 sysmips
-tas
 tee	470
 tgkill	424
 time
