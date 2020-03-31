@@ -24,7 +24,7 @@ export_headers()
 
 generate_table() 
 {
-	echo $arch
+	echo -n "$arch "
 
 	gcc list-syscalls.c -U__LP64__ -U__ILP32__ -U__i386__ -D${arch^^} \
 		-D__${arch}__ ${extraflags} -I headers/usr/include/ -o list-syscalls
@@ -90,3 +90,5 @@ do
 		;;
 	esac
 done
+
+echo ""
