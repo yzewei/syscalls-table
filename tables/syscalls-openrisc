@@ -43,7 +43,7 @@ clock_settime	112
 clock_settime64	404
 clone	220
 clone2
-clone3
+clone3	435
 close	57
 connect	203
 copy_file_range	285
