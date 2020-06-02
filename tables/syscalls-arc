@@ -70,6 +70,7 @@ execveat	281
 exit	93
 exit_group	94
 faccessat	48
+faccessat2	439
 fadvise64
 fadvise64_64	223
 fallocate	47

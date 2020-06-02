@@ -70,6 +70,7 @@ execveat	9437571
 exit	9437185
 exit_group	9437432
 faccessat	9437518
+faccessat2	9437623
 fadvise64
 fadvise64_64
 fallocate	9437536
