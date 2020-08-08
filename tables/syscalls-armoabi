@@ -45,6 +45,7 @@ clone	9437304
 clone2
 clone3	9437619
 close	9437190
+close_range	9437620
 connect	9437467
 copy_file_range	9437575
 creat	9437192

@@ -45,6 +45,7 @@ clone	5055
 clone2
 clone3	5435
 close	5003
+close_range	5436
 connect	5041
 copy_file_range	5320
 creat	5083

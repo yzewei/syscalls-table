@@ -45,6 +45,7 @@ clone	217
 clone2
 clone3
 close	6
+close_range	436
 connect	98
 copy_file_range	357
 creat	8

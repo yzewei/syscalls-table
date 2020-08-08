@@ -45,6 +45,7 @@ clone	6055
 clone2
 clone3	6435
 close	6003
+close_range	6436
 connect	6041
 copy_file_range	6324
 creat	6083

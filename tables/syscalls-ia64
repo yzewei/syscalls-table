@@ -45,6 +45,7 @@ clone	1128
 clone2	1213
 clone3
 close	1029
+close_range	1460
 connect	1192
 copy_file_range	1347
 creat	1030
