@@ -392,6 +392,7 @@ pread64	30
 preadv	317
 preadv2	346
 prlimit64	330
+process_madvise	440
 process_vm_readv	322
 process_vm_writev	323
 pselect6	272
