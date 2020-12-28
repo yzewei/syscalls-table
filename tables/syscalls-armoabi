@@ -60,6 +60,7 @@ epoll_create1	9437541
 epoll_ctl	9437435
 epoll_ctl_old
 epoll_pwait	9437530
+epoll_pwait2	9437625
 epoll_wait	9437436
 epoll_wait_old
 eventfd	9437535
