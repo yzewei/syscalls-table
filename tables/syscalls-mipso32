@@ -569,7 +569,6 @@ times	4043
 tkill	4236
 truncate	4092
 truncate64	4211
-udftrap
 ugetrlimit
 umask	4060
 umount	4022
@@ -585,7 +584,6 @@ utime	4030
 utimensat	4316
 utimensat_time64	4412
 utimes	4267
-utimesat
 utrap_install
 vfork
 vhangup	4111

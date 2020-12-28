@@ -569,7 +569,6 @@ times	1073741924
 tkill	1073742024
 truncate	1073741900
 truncate64
-udftrap
 ugetrlimit
 umask	1073741919
 umount
@@ -585,7 +584,6 @@ utime	1073741956
 utimensat	1073742104
 utimensat_time64
 utimes	1073742059
-utimesat
 utrap_install
 vfork	1073741882
 vhangup	1073741977

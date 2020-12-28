@@ -569,7 +569,6 @@ times	43
 tkill	208
 truncate	92
 truncate64	193
-udftrap
 ugetrlimit	190
 umask	60
 umount	22
@@ -585,7 +584,6 @@ utime	30
 utimensat	304
 utimensat_time64	412
 utimes	251
-utimesat
 utrap_install
 vfork	189
 vhangup	111
