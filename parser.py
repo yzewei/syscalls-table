@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-import collections
 import csv
 from datetime import datetime
 import io
@@ -12,7 +11,7 @@ from string import Template
 
 def load_syscall_data():
 
-    syscalls = collections.OrderedDict()
+    syscalls = {}
     present_archs = []
 
     # use current system call names - tables/* can contain archive data
@@ -20,7 +19,7 @@ def load_syscall_data():
         syscalldata = csv.reader(csvh, delimiter="\t")
 
         for row in syscalldata:
-            syscalls[row[0]] = collections.OrderedDict()
+            syscalls[row[0]] = {}
 
     os.chdir("tables")
     for filename in os.listdir(os.getcwd()):
