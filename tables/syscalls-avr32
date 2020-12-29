@@ -220,7 +220,6 @@ name_to_handle_at	304
 nanosleep	143
 newfstatat
 nfsservctl	145
-ni_syscall
 nice
 old_adjtimex
 oldfstat

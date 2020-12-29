@@ -241,7 +241,6 @@ name_to_handle_at	1326
 nanosleep	1168
 newfstatat	1286
 nfsservctl	1169
-ni_syscall	1024
 nice
 old_adjtimex
 old_getpagesize	1171

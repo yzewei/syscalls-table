@@ -6,7 +6,7 @@ TMP=`mktemp`
 # utimesat is PowerPC/SPU only
 # rest are not implemented
 #
-DEAD_SYSCALLS="afs_syscall|break|ftime|gtty|lock|mpx|oldwait4|prof|profil|putpmsg|security|stty|tuxcall|ulimit|vserver|arm_sync_file_range|utimesat"
+DEAD_SYSCALLS="afs_syscall|break|ftime|gtty|lock|mpx|oldwait4|prof|profil|putpmsg|security|stty|tuxcall|ulimit|vserver|arm_sync_file_range|utimesat|ni_syscall"
 
 for tbl_file in $(find $KERNELSRC -name syscall*.tbl)
 do
