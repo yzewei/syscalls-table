@@ -13,7 +13,6 @@ arc_settls
 arc_usr_cmpxchg
 arch_prctl
 arm_fadvise64_64	9437454
-arm_sync_file_range	9437525
 atomic_barrier
 atomic_cmpxchg_32
 bdflush	9437318

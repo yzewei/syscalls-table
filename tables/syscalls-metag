@@ -11,7 +11,6 @@ afs_syscall
 alarm
 arch_prctl
 arm_fadvise64_64
-arm_sync_file_range
 atomic_barrier
 atomic_cmpxchg_32
 bdflush
