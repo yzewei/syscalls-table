@@ -110,7 +110,7 @@ def generate_html_file():
 
         syscall_table += f"""
     <tr class='{trclass}'>
-    <td><a href='http://www.man7.org/linux/man-pages/man2/{syscall}.2.html'>
+    <td><a href='https://www.man7.org/linux/man-pages/man2/{syscall}.2.html'>
     {syscall}</a></td>"""
 
         for arch in archs:
