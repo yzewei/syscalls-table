@@ -67,6 +67,7 @@ def create_arch_list(present_archs):
     removed_archs = [
         "avr32",
         "blackfin",
+        "c6x",
         "cris",
         "frv",
         "m32r",
