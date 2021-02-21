@@ -87,22 +87,20 @@ table.syscalls tbody tr.odd td {
     <p>There are few features you can use:</p>
 
     <ul>
-    <li>search field allows to filter table by syscall name or number</li>
-    <li>system call names link to their man pages</li>
-    <li>'disable architectures' button allows to disable not needed columns</li>
-    <li>clicking on header entries sorts table</li>
-    <li>columns can be reordered by dragging column header</li>
+        <li>search field allows to filter table by syscall name or number</li>
+        <li>system call names link to their man pages</li>
+        <li>'disable architectures' button allows to disable not needed columns</li>
+        <li>clicking on header entries sorts table</li>
+        <li>columns can be reordered by dragging column header</li>
     </ul>
 
 <h1>Some notes</h1>
 
     <ul>
-    <li>table is updated at random moments &mdash; usually somewhere after rc1 kernel release</li>
-    <li>avr32, blackfin, c6x, cris, frv, m32r, metag, mn10300, score, sh64, tile, unicore32 architectures got dropped from Linux kernel - old data used.</li>
-    <li>system calls specific to above architectures were removed</li>
-    <li>RISC-V got split into 32 and 64-bit</li>
-    <li>system calls listed in <code>man 2 unimplemented</code> are not listed</li>
-    <li>I am gathering list of projects where this table helped. Please leave a comment in <a href="https://github.com/hrw/syscalls-table/issues/12">issue on GitHub</a>.
+        <li>table is updated at random moments &mdash; usually somewhere after rc1 kernel release</li>
+        <li>old data is used for architectures removed from Linux kernel (everything from avr32 to the end of table)</li>
+        <li>system calls specific to above architectures were removed</li>
+        <li>system calls listed in <code>man 2 unimplemented</code> are not listed</li>
     </ul>
 
 <h1>Author info</h1>    
@@ -114,6 +112,10 @@ table.syscalls tbody tr.odd td {
     Sources used to generate table are available in <a
     href="https://github.com/hrw/syscalls-table">git repository at github</a>.
     Patches are always welcomed.
+    </p>
+    <p>
+    If this table helped you in some project then please leave a comment in
+    <a href="https://github.com/hrw/syscalls-table/issues/12">issue on GitHub</a>.
     </p>
 
 <h1>Build info</h1>
