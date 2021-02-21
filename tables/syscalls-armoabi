@@ -16,11 +16,9 @@ arm_fadvise64_64	9437454
 atomic_barrier
 atomic_cmpxchg_32
 bdflush	9437318
-bfin_spinlock
 bind	9437466
 bpf	9437570
 brk	9437229
-cache_sync
 cachectl
 cacheflush
 capget	9437368

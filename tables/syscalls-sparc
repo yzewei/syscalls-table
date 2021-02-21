@@ -16,11 +16,9 @@ arm_fadvise64_64
 atomic_barrier
 atomic_cmpxchg_32
 bdflush	225
-bfin_spinlock
 bind	353
 bpf	349
 brk	17
-cache_sync
 cachectl
 cacheflush
 capget	21
