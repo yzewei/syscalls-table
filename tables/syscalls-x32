@@ -214,6 +214,7 @@ mmap	1073741833
 mmap2
 modify_ldt	1073741978
 mount	1073741989
+mount_setattr	1073742266
 move_mount	1073742253
 move_pages	1073742357
 mprotect	1073741834

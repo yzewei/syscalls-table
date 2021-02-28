@@ -214,6 +214,7 @@ mmap	4090
 mmap2	4210
 modify_ldt	4123
 mount	4021
+mount_setattr	4442
 move_mount	4429
 move_pages	4308
 mprotect	4125

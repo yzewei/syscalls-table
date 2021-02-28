@@ -214,6 +214,7 @@ mmap	90
 mmap2	89
 modify_ldt
 mount	21
+mount_setattr	442
 move_mount	429
 move_pages	295
 mprotect	125
