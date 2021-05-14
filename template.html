@@ -1,7 +1,27 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>System calls table for several architectures</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Linux kernel system calls for several architectures" />
+    <meta name="keywords" content="linux system call calls syscalls x86-64 x86_64 aarch64 arm64 arm riscv riscv64" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@haerwu" />
+    <meta name="twitter:title" content="Marcin Juszkiewicz"/>
+    <meta name="twitter:description" content="Linux kernel system calls table" />
+    <meta name="twitter:creator" content="@haerwu" />
+    <meta name="twitter:image" content="https://marcin.juszkiewicz.com.pl/files/images/hrw-512.jpg" />
+
+    <meta property="og:title" content="Linux kernel system calls table" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://marcin.juszkiewicz.com.pl/download/tables/syscalls.html" />
+    <meta property="og:description" content="Linux kernel system calls table" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Marcin Juszkiewicz" />
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.2/css/colReorder.dataTables.min.css"/>
@@ -69,7 +89,7 @@ table.syscalls tbody tr.odd td {
 </head>
 <body>
 
-<h1>Introduction</h1>
+<h1>Linux kernel system calls for all architectures</h1>
     <p>
     Linux provides many system calls for userspace. But numbers used for them
     differ between architectures. This page was created to help developers find
@@ -83,7 +103,7 @@ table.syscalls tbody tr.odd td {
     below.
     </p>
 
-<h1>How to use</h1>
+<h2>How to use</h2>
     <p>There are few features you can use:</p>
 
     <ul>
@@ -94,7 +114,7 @@ table.syscalls tbody tr.odd td {
         <li>columns can be reordered by dragging column header</li>
     </ul>
 
-<h1>Some notes</h1>
+<h2>Some notes</h2>
 
     <ul>
         <li>table is updated at random moments &mdash; usually somewhere after rc1 kernel release</li>
@@ -103,11 +123,11 @@ table.syscalls tbody tr.odd td {
         <li>system calls listed in <code>man 2 unimplemented</code> are not listed</li>
     </ul>
 
-<h1>Author info</h1>    
+<h2>Author info</h2>
     <p>
     System calls table is maintained by <a href="https://marcin.juszkiewicz.com.pl/">Marcin Juszkiewicz</a> &mdash; AArch64/Arm developer working at Red Hat as Linaro assignee.
     </p>
-<h1>How to help</h1>
+<h2>How to help</h2>
     <p>
     Sources used to generate table are available in <a
     href="https://github.com/hrw/syscalls-table">git repository at github</a>.
@@ -118,7 +138,7 @@ table.syscalls tbody tr.odd td {
     <a href="https://github.com/hrw/syscalls-table/issues/12">issue on GitHub</a>.
     </p>
 
-<h1>Build info</h1>
+<h2>Build info</h2>
     <p>Table generated on <strong>$generate_time</strong> using data from <strong>$kernel_version</strong> kernel source.</p>
 
 <table class="syscalls">
