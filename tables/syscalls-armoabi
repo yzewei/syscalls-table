@@ -182,6 +182,9 @@ kexec_file_load	9437585
 kexec_load	9437531
 keyctl	9437495
 kill	9437221
+landlock_add_rule	9437629
+landlock_create_ruleset	9437628
+landlock_restrict_self	9437630
 lchown	9437200
 lchown32	9437382
 lgetxattr	9437414
