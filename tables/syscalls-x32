@@ -404,7 +404,7 @@ pwritev	1073742359
 pwritev2	1073742371
 query_module
 quotactl	1073742003
-quotactl_path	1073742267
+quotactl_path
 read	1073741824
 readahead	1073742011
 readdir

@@ -404,7 +404,7 @@ pwritev	364
 pwritev2	394
 query_module	167
 quotactl	131
-quotactl_path	443
+quotactl_path
 read	3
 readahead	225
 readdir	89
