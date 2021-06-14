@@ -7,11 +7,12 @@ TMP=`mktemp`
 # rest are not implemented
 #
 DEAD_SYSCALLS="afs_syscall|break|ftime|gtty|lock|mpx|oldwait4|prof|profil|putpmsg|security|stty|tuxcall|ulimit|vserver|arm_sync_file_range|utimesat|ni_syscall"
+FAKE_ENTRIES="^(available|reserved|unused).*$"
 
 for tbl_file in $(find ${KERNELSRC}/arch -name syscall*.tbl)
 do
-	egrep -v "(^#|^$|sys_ni_syscall|unused|${DEAD_SYSCALLS})" $tbl_file |
-		awk '{ print $3 }' > ${TMP}
-	cat syscall-names.text >>${TMP}
-	LC_ALL=C sort -u ${TMP} >syscall-names.text
+	egrep -v "(^#|^$|sys_ni_syscall)" $tbl_file | awk '{ print $3 }' >> ${TMP}
 done
+
+cat syscall-names.text >>${TMP}
+LC_ALL=C sort -u ${TMP} | egrep -v $FAKE_ENTRIES | egrep -v -w $DEAD_SYSCALLS >syscall-names.text
