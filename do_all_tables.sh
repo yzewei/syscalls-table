@@ -83,9 +83,6 @@ do
 				extraflags=-D__32bit_syscall_numbers__	generate_table
 		arch=sparc64	extraflags=-D__arch64__			generate_table
 		;;
-	sh)
-									generate_table
-		;;
 	*)
 		generate_table
 		;;
