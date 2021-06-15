@@ -28,7 +28,7 @@ generate_table()
 	echo -n "$arch "
 
 	gcc list-syscalls.c -U__LP64__ -U__ILP32__ -U__i386__ -D${arch^^} \
-		-D__${arch}__ ${extraflags} -I headers/usr/include/ -o list-syscalls
+		-D__${arch}__ ${extraflags} -I headers/usr/include/ -o list-syscalls &>/dev/null
 	./list-syscalls > "tables/syscalls-$arch"
 }
 
@@ -68,7 +68,7 @@ do
 		arch=x86_64	extraflags=-D__LP64__			generate_table
 		;;
 	riscv)
-		arch=riscv32	                        		generate_table
+		arch=riscv32	extraflags=-D__SIZEOF_POINTER__=4       generate_table
 		arch=riscv64	extraflags=-D__LP64__			generate_table
 		;;
 	powerpc)
