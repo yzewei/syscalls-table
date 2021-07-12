@@ -203,6 +203,7 @@ madvise	75
 mbind	429
 membarrier	517
 memfd_create	512
+memfd_secret
 memory_ordering
 migrate_pages	449
 mincore	375
@@ -404,7 +405,7 @@ pwritev	491
 pwritev2	521
 query_module	347
 quotactl	148
-quotactl_fd
+quotactl_fd	553
 read	3
 readahead	379
 readdir

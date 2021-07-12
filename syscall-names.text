@@ -203,6 +203,7 @@ madvise
 mbind
 membarrier
 memfd_create
+memfd_secret
 memory_ordering
 migrate_pages
 mincore

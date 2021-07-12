@@ -203,6 +203,7 @@ madvise	1073741852
 mbind	1073742061
 membarrier	1073742148
 memfd_create	1073742143
+memfd_secret	1073742271
 memory_ordering
 migrate_pages	1073742080
 mincore	1073741851
@@ -404,7 +405,7 @@ pwritev	1073742359
 pwritev2	1073742371
 query_module
 quotactl	1073742003
-quotactl_fd
+quotactl_fd	1073742267
 read	1073741824
 readahead	1073742011
 readdir
