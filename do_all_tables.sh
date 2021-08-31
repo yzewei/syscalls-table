@@ -58,22 +58,13 @@ do
 		arch=mips64n32	extraflags=-D_MIPS_SIM=_MIPS_SIM_NABI32	generate_table
 		arch=mips64	extraflags=-D_MIPS_SIM=_MIPS_SIM_ABI64	generate_table
 		;;
-	tile)
-									generate_table
-		arch=tile64	extraflags="-D__LP64__ -D__tilegx__"	generate_table
-		;;
-	x86)
-		arch=i386	                        		generate_table
-		arch=x32 	extraflags=-D__ILP32__			generate_table
-		arch=x86_64	extraflags=-D__LP64__			generate_table
-		;;
-	riscv)
-		arch=riscv32	extraflags=-D__SIZEOF_POINTER__=4       generate_table
-		arch=riscv64	extraflags=-D__LP64__			generate_table
-		;;
 	powerpc)
 									generate_table
 		arch=powerpc64						generate_table
+		;;
+	riscv)
+		arch=riscv32	extraflags=-D__SIZEOF_POINTER__=4	generate_table
+		arch=riscv64	extraflags=-D__LP64__			generate_table
 		;;
 	s390)
 									generate_table
@@ -82,6 +73,15 @@ do
 	sparc)
 				extraflags=-D__32bit_syscall_numbers__	generate_table
 		arch=sparc64	extraflags=-D__arch64__			generate_table
+		;;
+	tile)
+									generate_table
+		arch=tile64	extraflags="-D__LP64__ -D__tilegx__"	generate_table
+		;;
+	x86)
+		arch=i386						generate_table
+		arch=x32	extraflags=-D__ILP32__			generate_table
+		arch=x86_64	extraflags=-D__LP64__			generate_table
 		;;
 	*)
 		generate_table
