@@ -14,7 +14,7 @@ Check issues list and work on any of them.
 
 ## Where to see?
 
-I keep copy at https://fedora.juszkiewicz.com.pl/syscalls.html page.
+I keep copy at https://marcin.juszkiewicz.com.pl/download/tables/syscalls.html page.
 
 ## How to run
 
