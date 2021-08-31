@@ -53,6 +53,9 @@ do
 		arch=armoabi	extraflags=				generate_table
 		arch=arm	extraflags=-D__ARM_EABI__		generate_table
 		;;
+	loongarch)
+		arch=loongarch64	extraflags=-D_LOONGARCH_SZLONG=64	generate_table
+		;;
 	mips)
 		arch=mipso32	extraflags=-D_MIPS_SIM=_MIPS_SIM_ABI32	generate_table
 		arch=mips64n32	extraflags=-D_MIPS_SIM=_MIPS_SIM_NABI32	generate_table
