@@ -54,6 +54,7 @@ do
 		arch=arm		extraflags=-D__ARM_EABI__		generate_table
 		;;
 	loongarch)
+		# 32-bit variant of loongarch may appear
 		arch=loongarch64	extraflags=-D_LOONGARCH_SZLONG=64	generate_table
 		;;
 	mips)
