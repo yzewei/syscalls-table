@@ -64,7 +64,9 @@ def create_arch_list(present_archs):
         "s390",
     ]
 
+    # loongarch64 is not in mainline so goes after all supported ones
     removed_archs = [
+        "loongarch64",
         "avr32",
         "blackfin",
         "c6x",
