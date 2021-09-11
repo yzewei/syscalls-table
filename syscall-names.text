@@ -375,7 +375,6 @@ pciconfig_read
 pciconfig_write
 perf_event_open
 perfctr
-perfmonctl
 personality
 pidfd_getfd
 pidfd_open
