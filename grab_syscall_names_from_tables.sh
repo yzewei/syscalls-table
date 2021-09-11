@@ -7,7 +7,7 @@ TMP=`mktemp`
 # rest are not implemented
 #
 DEAD_SYSCALLS="afs_syscall|break|ftime|gtty|lock|mpx|oldwait4|prof|profil|putpmsg|security|stty|tuxcall|ulimit|vserver|arm_sync_file_range|utimesat|ni_syscall"
-FAKE_ENTRIES="^(available|reserved|unused).*$"
+FAKE_ENTRIES="^(available|reserved|unused|SYSCALL_MASK).*$"
 
 for tbl_file in $(find ${KERNELSRC}/arch -name syscall*.tbl)
 do
