@@ -40,7 +40,7 @@ clock_settime
 clock_settime64	404
 clone	220
 clone2
-clone3
+clone3	435
 close	57
 close_range	436
 connect	203
