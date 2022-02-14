@@ -61,9 +61,7 @@ def create_arch_list(present_archs):
         "s390",
     ]
 
-    # loongarch64 is not in mainline so goes after all supported ones
     removed_archs = [
-        "loongarch64",
         "avr32",
         "blackfin",
         "c6x",
@@ -80,9 +78,11 @@ def create_arch_list(present_archs):
     ]
 
     for arch in sorted(present_archs):
-
         if arch not in removed_archs and arch not in archs:
             archs.append(arch)
+
+    # loongarch64 is not in mainline so goes after all supported ones
+    archs.append("loongarch64")
 
     for arch in removed_archs:
         archs.append(arch)
