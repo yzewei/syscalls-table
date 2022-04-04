@@ -67,6 +67,7 @@ def create_arch_list(present_archs):
         "m32r",
         "metag",
         "mn10300",
+        "nds32",
         "score",
         "sh64",
         "tile",
