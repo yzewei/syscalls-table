@@ -64,6 +64,7 @@ def create_arch_list(present_archs):
         "c6x",
         "cris",
         "frv",
+        "h8300",
         "m32r",
         "metag",
         "mn10300",
