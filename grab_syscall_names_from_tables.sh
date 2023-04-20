@@ -11,8 +11,8 @@ FAKE_ENTRIES="^(available|reserved|unused|SYSCALL_MASK).*$"
 
 for tbl_file in $(find ${KERNELSRC}/arch -name syscall*.tbl)
 do
-	egrep -v "(^#|^$|sys_ni_syscall)" $tbl_file | awk '{ print $3 }' >> ${TMP}
+	grep -E -v "(^#|^$|sys_ni_syscall)" $tbl_file | awk '{ print $3 }' >> ${TMP}
 done
 
 cat syscall-names.text >>${TMP}
-LC_ALL=C sort -u ${TMP} | egrep -v $FAKE_ENTRIES | egrep -v -w $DEAD_SYSCALLS >syscall-names.text
+LC_ALL=C sort -u ${TMP} | grep -E -v $FAKE_ENTRIES | grep -E -v -w $DEAD_SYSCALLS >syscall-names.text

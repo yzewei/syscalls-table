@@ -11,12 +11,12 @@ export_headers()
 	make -s -C ${KERNELSRC} ARCH=${arch} O=${PWD}/headers headers_install &>/dev/null
 
 
-	egrep -h "^#define __NR_" ${PWD}/headers/usr/include/asm/unistd*.h ${PWD}/headers/usr/include/asm-generic/unistd.h |
-		egrep -v "(unistd.h|NR3264|__NR_syscall|__SC_COMP|__NR_.*Linux|__NR_FAST)" |
-		egrep -vi "(not implemented|available|unused|reserved|xtensa|spill)" |
-		egrep -v "(__SYSCALL|SYSCALL_BASE|SYSCALL_MASK)" |
+	grep -E -h "^#define __NR_" ${PWD}/headers/usr/include/asm/unistd*.h ${PWD}/headers/usr/include/asm-generic/unistd.h |
+		grep -E -v "(unistd.h|NR3264|__NR_syscall|__SC_COMP|__NR_.*Linux|__NR_FAST)" |
+		grep -E -vi "(not implemented|available|unused|reserved|xtensa|spill)" |
+		grep -E -v "(__SYSCALL|SYSCALL_BASE|SYSCALL_MASK)" |
 		sed -e "s/#define\s*__NR_//g" -e "s/\s.*//g" |
-		egrep -v -w $DEAD_SYSCALLS |
+		grep -E -v -w $DEAD_SYSCALLS |
 		sort -u >${TMP}
 	cat syscall-names.text >>${TMP}
 	sed -i '/arch_specific_syscall/d' ${TMP}
