@@ -21,6 +21,7 @@ bpf	340
 brk	83
 cachectl
 cacheflush
+cachestat	451
 capget	158
 capset	159
 chdir	41

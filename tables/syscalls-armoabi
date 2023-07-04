@@ -21,6 +21,7 @@ bpf	9437570
 brk	9437229
 cachectl
 cacheflush
+cachestat	9437635
 capget	9437368
 capset	9437369
 chdir	9437196
