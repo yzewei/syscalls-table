@@ -3,7 +3,7 @@ name: Update Syscalls Tables
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * 1' # Each monday
+    - cron: '0 1 * * 2' # Each tuesday
 
 jobs:
   update-tables:
@@ -24,11 +24,8 @@ jobs:
       - name: Fetch linux version
         working-directory: linux/
         run: |
-          MAJ_VERSION=$(grep VERSION Makefile | head -n 1 | awk '{print $3}')
-          PATCH_VERSION=$(grep PATCHLEVEL Makefile | head -n 1 | awk '{print $3}')
-          SUBLEVEL_VERSION=$(grep SUBLEVEL Makefile | head -n 1 | awk '{print $3}')
-          EXTRA_VERSION=$(grep EXTRAVERSION Makefile | head -n 1 | awk '{print $3}')
-          echo "VERSION=$MAJ_VERSION.$PATCH_VERSION.$SUBLEVEL_VERSION$EXTRA_VERSION" >> $GITHUB_ENV
+          LINUX_VER=$(make kernelversion)
+          echo "VERSION=$LINUX_VER" >> $GITHUB_ENV
           
       - name: Bump syscalls-tables
         run: |
