@@ -19,6 +19,7 @@ jobs:
       - name: Checkout syscalls-table ⤵️
         uses: actions/checkout@v4
         with:
+          path: syscalls-table/
           ref: master
       
       - name: Checkout linux ⤵️
@@ -32,12 +33,14 @@ jobs:
           echo "VERSION=$LINUX_VER" >> $GITHUB_ENV
           
       - name: Bump syscalls-tables
+        working-directory: syscalls-table/
         run: |
           make KERNELSRC=$GITHUB_WORKSPACE/linux/
           
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
+          path: syscalls-table/
           signoff: true
           base: master
           branch: update/tables
