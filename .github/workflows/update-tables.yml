@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: linux
-          repo: torvalds/linux
+          repository: torvalds/linux
           
       - name: Fetch linux version
         working-directory: linux/
