@@ -41,7 +41,9 @@ def create_arch_list(present_archs):
 
 def generate_system_calls_tree():
 
-    syscalls_for_template = {}
+    syscalls_for_template = {
+        'linux_version': system_calls.linux_version
+    }
 
     for syscall_name in syscalls.names():
         syscalls_for_template[syscall_name] = {}
