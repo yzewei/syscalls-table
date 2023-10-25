@@ -4,6 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 1 * * 2' # Each tuesday
+  # also run on repo changes
+  push:
+    branches: [ "devel" ]
+  pull_request:
+    branches: [ "devel" ]
+
 
 jobs:
   update-tables:
