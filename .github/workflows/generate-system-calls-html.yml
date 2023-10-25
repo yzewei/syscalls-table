@@ -3,7 +3,8 @@ name: Generate system calls HTML table
 #
 # for now it will be manual
 #
-#  on:
+on:
+  workflow_dispatch
 #   push:
 #     branches: [ "master" ]
 
