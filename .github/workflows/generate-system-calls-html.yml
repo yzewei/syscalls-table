@@ -4,9 +4,12 @@ name: Generate system calls HTML table
 # for now it will be manual
 #
 on:
-  workflow_dispatch
-#   push:
-#     branches: [ "master" ]
+  workflow_dispatch:
+  push:
+    branches: 
+    - "master"
+    paths:
+    - "data/*"
 
 
 jobs:
