@@ -576,7 +576,6 @@ uname
 unlink
 unlinkat
 unshare
-uselib
 userfaultfd
 ustat
 utime
