@@ -40,7 +40,6 @@ clock_nanosleep_time64	9437591
 clock_settime	9437446
 clock_settime64	9437588
 clone	9437304
-clone2
 clone3	9437619
 close	9437190
 close_range	9437620
@@ -154,7 +153,6 @@ gettid	9437408
 gettimeofday	9437262
 getuid	9437208
 getuid32	9437383
-getunwind
 getxattr	9437413
 getxgid
 getxpid
@@ -252,7 +250,6 @@ newfstatat
 nfsservctl	9437353
 nice	9437218
 old_adjtimex
-old_getpagesize
 oldfstat
 oldlstat
 oldolduname
