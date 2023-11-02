@@ -159,7 +159,6 @@ syscalls_riscv32 = {
     "munlockall": 231,
     "munmap": 215,
     "name_to_handle_at": 264,
-    "nfsservctl": 42,
     "open_by_handle_at": 265,
     "open_tree": 428,
     "openat": 56,

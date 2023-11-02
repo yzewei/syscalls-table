@@ -97,7 +97,6 @@ syscalls_x32 = {
     "getpgid": 1073741945,
     "getpgrp": 1073741935,
     "getpid": 1073741863,
-    "getpmsg": 1073742005,
     "getppid": 1073741934,
     "getpriority": 1073741964,
     "getrandom": 1073742142,

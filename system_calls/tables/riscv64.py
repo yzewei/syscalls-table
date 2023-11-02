@@ -167,7 +167,6 @@ syscalls_riscv64 = {
     "name_to_handle_at": 264,
     "nanosleep": 101,
     "newfstatat": 79,
-    "nfsservctl": 42,
     "open_by_handle_at": 265,
     "open_tree": 428,
     "openat": 56,

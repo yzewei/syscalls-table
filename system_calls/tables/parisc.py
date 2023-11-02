@@ -3,7 +3,6 @@
 syscalls_parisc = {
     "_llseek": 140,
     "_newselect": 142,
-    "_sysctl": 149,
     "accept": 35,
     "accept4": 320,
     "access": 33,
@@ -11,7 +10,6 @@ syscalls_parisc = {
     "add_key": 264,
     "adjtimex": 124,
     "alarm": 27,
-    "bdflush": 134,
     "bind": 22,
     "bpf": 341,
     "brk": 45,
@@ -378,7 +376,6 @@ syscalls_parisc = {
     "unlink": 10,
     "unlinkat": 281,
     "unshare": 288,
-    "uselib": 86,
     "userfaultfd": 344,
     "ustat": 62,
     "utime": 30,
