@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from datetime import datetime
+from datetime import datetime, timezone
 from jinja2 import Environment, FileSystemLoader
 
 import system_calls
@@ -66,7 +66,7 @@ def generate_html_file():
     template = env.get_template('syscalls.html.j2')
 
     output = template.render(generate_time=datetime.strftime(
-                             datetime.utcnow(), "%d %B %Y %H:%M"),
+                             datetime.now(timezone.utc), "%d %B %Y %H:%M"),
                              archs=create_arch_list(syscalls.archs()),
                              syscalls=generate_system_calls_tree(),
                              syscall_names=syscalls.names(),
