@@ -18,6 +18,9 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      - name: install packages data
+        run: sudo apt-get update
+
       # without x32 headers we get i386 data for x32
       - name: install x32 headers
         run: sudo apt-get install libc6-dev-x32
