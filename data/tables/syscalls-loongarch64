@@ -19,7 +19,7 @@ bpf	280
 brk	214
 cachectl
 cacheflush
-cachestat	451
+cachestat
 capget	90
 capset	91
 chdir	49
@@ -40,7 +40,7 @@ clock_settime64
 clone	220
 clone3	435
 close	57
-close_range	436
+close_range
 connect	203
 copy_file_range	285
 creat
@@ -54,7 +54,7 @@ epoll_create1	20
 epoll_ctl	21
 epoll_ctl_old
 epoll_pwait	22
-epoll_pwait2	441
+epoll_pwait2
 epoll_wait
 epoll_wait_old
 eventfd
@@ -66,7 +66,7 @@ execveat	281
 exit	93
 exit_group	94
 faccessat	48
-faccessat2	439
+faccessat2
 fadvise64	223
 fadvise64_64
 fallocate	47
@@ -75,7 +75,7 @@ fanotify_mark	263
 fchdir	50
 fchmod	52
 fchmodat	53
-fchmodat2	452
+fchmodat2
 fchown	55
 fchown32
 fchownat	54
@@ -88,12 +88,12 @@ flistxattr	13
 flock	32
 fork
 fremovexattr	16
-fsconfig	431
+fsconfig
 fsetxattr	7
-fsmount	432
-fsopen	430
-fspick	433
-fstat
+fsmount
+fsopen
+fspick
+fstat	80
 fstat64
 fstatat64
 fstatfs	44
@@ -102,11 +102,11 @@ fsync	82
 ftruncate	46
 ftruncate64
 futex	98
-futex_requeue	456
+futex_requeue
 futex_time64
-futex_wait	455
-futex_waitv	449
-futex_wake	454
+futex_wait
+futex_waitv
+futex_wake
 futimesat
 get_mempolicy	236
 get_robust_list	100
@@ -139,7 +139,7 @@ getresgid	150
 getresgid32
 getresuid	148
 getresuid32
-getrlimit
+getrlimit	163
 getrusage	165
 getsid	156
 getsockname	204
@@ -164,9 +164,9 @@ io_pgetevents	292
 io_pgetevents_time64
 io_setup	0
 io_submit	2
-io_uring_enter	426
-io_uring_register	427
-io_uring_setup	425
+io_uring_enter
+io_uring_register
+io_uring_setup
 ioctl	29
 ioperm
 iopl
@@ -175,33 +175,33 @@ ioprio_set	30
 ipc
 kcmp	272
 kern_features
-kexec_file_load	294
+kexec_file_load
 kexec_load	104
 keyctl	219
 kill	129
-landlock_add_rule	445
-landlock_create_ruleset	444
-landlock_restrict_self	446
+landlock_add_rule
+landlock_create_ruleset
+landlock_restrict_self
 lchown
 lchown32
 lgetxattr	9
 link
 linkat	37
 listen	201
-listmount	458
+listmount
 listxattr	11
 llistxattr	12
 lookup_dcookie	18
 lremovexattr	15
 lseek	62
 lsetxattr	6
-lsm_get_self_attr	459
-lsm_list_modules	461
-lsm_set_self_attr	460
+lsm_get_self_attr
+lsm_list_modules
+lsm_set_self_attr
 lstat
 lstat64
 madvise	233
-map_shadow_stack	453
+map_shadow_stack
 mbind	235
 membarrier	283
 memfd_create	279
@@ -220,8 +220,8 @@ mmap	222
 mmap2
 modify_ldt
 mount	40
-mount_setattr	442
-move_mount	429
+mount_setattr
+move_mount
 move_pages	239
 mprotect	226
 mq_getsetattr	185
@@ -244,7 +244,7 @@ munlockall	231
 munmap	215
 name_to_handle_at	264
 nanosleep	101
-newfstatat
+newfstatat	79
 nice
 old_adjtimex
 oldfstat
@@ -255,9 +255,9 @@ oldumount
 olduname
 open
 open_by_handle_at	265
-open_tree	428
+open_tree
 openat	56
-openat2	437
+openat2
 or1k_atomic
 osf_fstat
 osf_fstatfs
@@ -296,9 +296,9 @@ pciconfig_write
 perf_event_open	241
 perfctr
 personality	92
-pidfd_getfd	438
-pidfd_open	434
-pidfd_send_signal	424
+pidfd_getfd
+pidfd_open
+pidfd_send_signal
 pipe
 pipe2	59
 pivot_root	41
@@ -313,8 +313,8 @@ pread64	67
 preadv	69
 preadv2	286
 prlimit64	261
-process_madvise	440
-process_mrelease	448
+process_madvise
+process_mrelease
 process_vm_readv	270
 process_vm_writev	271
 pselect6	72
@@ -324,7 +324,7 @@ pwrite64	68
 pwritev	70
 pwritev2	287
 quotactl	60
-quotactl_fd	443
+quotactl_fd
 read	63
 readahead	213
 readdir
@@ -392,7 +392,7 @@ sendmmsg	269
 sendmsg	211
 sendto	206
 set_mempolicy	237
-set_mempolicy_home_node	450
+set_mempolicy_home_node
 set_robust_list	99
 set_thread_area
 set_tid_address	96
@@ -420,7 +420,7 @@ setresuid	147
 setresuid32
 setreuid	145
 setreuid32
-setrlimit
+setrlimit	164
 setsid	157
 setsockopt	208
 settimeofday	170
@@ -453,7 +453,7 @@ stat
 stat64
 statfs	43
 statfs64
-statmount	457
+statmount
 statx	291
 stime
 subpage_prot
